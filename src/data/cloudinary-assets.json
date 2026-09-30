@@ -1,0 +1,13 @@
+{
+  "/icons/favicon.svg": "https://res.cloudinary.com/njq5pi5g/image/upload/v1790707427/imx/icons/favicon.svg",
+  "icons": {
+    "favicon": {
+      "type": "image",
+      "format": "svg",
+      "publicId": "imx/icons/favicon",
+      "url": "https://res.cloudinary.com/njq5pi5g/image/upload/v1790707427/imx/icons/favicon.svg",
+      "width": 64,
+      "height": 64
+    }
+  }
+}
