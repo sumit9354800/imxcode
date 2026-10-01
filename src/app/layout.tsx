@@ -10,10 +10,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
-  title: "IMX — Digital Studio",
+  title: "IMX Digital Studio",
   description:
-    "IMX is a premium digital studio combining technology, design and creative expertise.",
+    "IMX Digital Studio — Technology, design, creative and digital growth.",
+
+  verification: {
+    google: "WlESotBSkGBuV9SvGMkZGrewiFjYA26y_HTQxnov5yM",
+  },
 };
 
 export default function RootLayout({
