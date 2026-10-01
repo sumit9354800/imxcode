@@ -27,14 +27,12 @@ export default function FeaturedWork() {
           <div>
             <h2 className="max-w-5xl text-[clamp(3rem,6vw,6.5rem)] font-semibold leading-[0.86] tracking-[-0.075em]">
               Selected projects.
-              <span className="block text-[#737A1A]">
-                Built with intent.
-              </span>
+              <span className="block text-[#737A1A]">Built with intent.</span>
             </h2>
 
             <p className="mt-8 max-w-2xl text-base leading-7 text-black sm:text-lg sm:leading-8">
-              A selection of digital products, websites and creative
-              experiences built across different industries and disciplines.
+              A selection of digital products, websites and creative experiences
+              built across different industries and disciplines.
             </p>
           </div>
         </div>
@@ -48,7 +46,7 @@ export default function FeaturedWork() {
             >
               {/* Image */}
               <Link
-                href={`/work/${project.slug}`}
+                href={`/work/${project.liveUrl}`}
                 className="block"
                 aria-label={`View ${project.title}`}
               >
@@ -93,7 +91,7 @@ export default function FeaturedWork() {
                 </div>
 
                 {/* Title */}
-                <Link href={`/work/${project.slug}`}>
+                <Link href={`/work/${project.liveUrl}`}>
                   <h3 className="mt-5 text-2xl font-medium tracking-[-0.055em] transition-colors duration-300 group-hover:text-[#737A1A] sm:text-3xl lg:text-4xl">
                     {project.title}
                   </h3>
@@ -137,7 +135,6 @@ export default function FeaturedWork() {
                     className="group/link inline-flex items-center gap-2 rounded-full bg-[#737A1A] px-4 py-2.5 text-xs font-medium !text-white transition-colors duration-300 hover:bg-[#5f6515]"
                   >
                     Live Website
-
                     <ExternalLink
                       size={14}
                       className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
@@ -152,7 +149,6 @@ export default function FeaturedWork() {
                     className="group/github inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-4 py-2.5 text-xs font-medium text-black transition-colors duration-300 hover:border-[#737A1A] hover:text-[#737A1A]"
                   >
                     GitHub
-
                     <Github
                       size={14}
                       className="transition-transform duration-300 group-hover/github:scale-110"
@@ -161,11 +157,10 @@ export default function FeaturedWork() {
 
                   {/* Detail */}
                   <Link
-                    href={`/work/${project.slug}`}
+                    href={`/work/${project.liveUrl}`}
                     className="group/detail ml-auto inline-flex items-center gap-2 text-xs font-medium text-black/50 transition-colors duration-300 hover:text-[#737A1A]"
                   >
                     View project
-
                     <ArrowUpRight
                       size={14}
                       className="transition-transform duration-300 group-hover/detail:translate-x-0.5 group-hover/detail:-translate-y-0.5"
@@ -188,7 +183,6 @@ export default function FeaturedWork() {
             className="group inline-flex w-fit items-center gap-3 rounded-full border border-black/15 px-5 py-3 text-xs font-medium text-black transition-colors duration-300 hover:border-[#737A1A] hover:bg-[#737A1A] hover:text-white"
           >
             View all work
-
             <ArrowUpRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

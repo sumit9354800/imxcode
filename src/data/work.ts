@@ -1,7 +1,6 @@
 export type WorkProject = {
   id: string;
   title: string;
-  slug: string;
   category: string;
   year: string;
   role: string;
@@ -22,7 +21,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-1",
     title: "FOSTIIMA Business School Website",
-    slug: "fostiima-business-school-website",
     category: "Full-Stack Development / Institutional Website",
     year: "2026",
     role: "Full-Stack Developer",
@@ -64,7 +62,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-2",
     title: "MRTECHYCOOL Business Website",
-    slug: "mrtechycool-business-website",
     category: "Client Project / Commercial",
     year: "2024",
     role: "Lead Full Stack Developer",
@@ -100,7 +97,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-3",
     title: "Growje Business Website",
-    slug: "growje-business-website",
     category: "Client Project / Commercial",
     year: "2024",
     role: "Full Stack Web Developer",
@@ -136,7 +132,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-4",
     title: "United Institute Educational Portal",
-    slug: "united-institute-educational-portal",
     category: "Commercial / Education",
     year: "2023",
     role: "Frontend & Backend Engineer",
@@ -172,7 +167,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-5",
     title: "MX SAMMY | B2B Sales & Revenue Analytics CRM",
-    slug: "mx-sammy-b2b-sales-revenue-analytics-crm",
     category: "Full Stack / SaaS CRM",
     year: "2024",
     role: "Full Stack Developer",
@@ -209,7 +203,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-6",
     title: "STACKED — Immersive 3D Experience",
-    slug: "stacked-immersive-3d-experience",
     category: "Creative Engineering / 3D Web",
     year: "2024",
     role: "Creative Frontend Engineer",
@@ -238,7 +231,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-7",
     title: "KiranaGo — Grocery E-commerce",
-    slug: "kiranago-grocery-ecommerce",
     category: "Web Application / Hyperlocal Delivery",
     year: "2023",
     role: "Full Stack Developer",
@@ -267,7 +259,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-8",
     title: "FreshCart Organics Web Application",
-    slug: "freshcart-organics-web-application",
     category: "E-Commerce Application",
     year: "2023",
     role: "Frontend & Backend Engineer",
@@ -303,7 +294,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-9",
     title: "Airbnb Clone — Full-Stack Rental Platform",
-    slug: "airbnb-clone-full-stack-rental-platform",
     category: "Web Application / Architecture Study",
     year: "2023",
     role: "Full Stack Developer",
@@ -339,7 +329,6 @@ export const workProjects: WorkProject[] = [
   {
     id: "proj-10",
     title: "Myntra Fashion E-Commerce UI",
-    slug: "myntra-fashion-ecommerce-ui",
     category: "Frontend Engineering / UI Reproduction",
     year: "2023",
     role: "Frontend Engineer",
