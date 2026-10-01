@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const capabilities = [
@@ -292,9 +293,14 @@ export default function HeroSection() {
 
                   {/* IMX symbol */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[76px] font-semibold tracking-[-0.13em] text-white">
-                      IMX
-                    </span>
+                    <Image
+                      src="/icons/favicon-light.png"
+                      alt="IMX Digital Studio"
+                      width={110}
+                      height={110}
+                      className="h-[76px] w-auto object-contain"
+                      priority
+                    />
                   </div>
 
                   {/* Technical data */}
