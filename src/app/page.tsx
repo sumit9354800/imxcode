@@ -9,6 +9,7 @@ import FAQSection from "@/components/home/FAQSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import ContactFormSection from "@/components/home/ContactFormSection";
 import SkillsSection from "@/components/home/SkillsSection";
+import ProjectsCarousel from "@/components/home/ProjectsCarousel";
 
 export default function HomePage() {
   return (
@@ -16,8 +17,9 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <TrustSection />
-
+         
         <ServicesSection />
+        <ProjectsCarousel />
         <SkillsSection />
         <CreativeShowcaseSection />
 
