@@ -9,8 +9,8 @@ export type ContactCTA = {
 };
 
 export const contactActions = {
-  phone: "",
-  whatsapp: "",
+  phone: "7678289882",
+  whatsapp: "917678289882",
 };
 
 export const contactCTA: ContactCTA = {
