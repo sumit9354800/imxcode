@@ -39,8 +39,12 @@ export const navigation: NavigationItem[] = [
     href: "/team",
   },
   {
-    label: "Insights",
-    href: "/insights",
+    label: "Pricing",
+    href: "/pricing",
+  },
+  {
+    label: "Blog",
+    href: "/blog",
   },
 ];
 
@@ -66,7 +70,6 @@ export const serviceGroups: ServiceGroup[] = [
       },
     ],
   },
-
   {
     title: "Design & Creative",
     items: [
@@ -88,7 +91,6 @@ export const serviceGroups: ServiceGroup[] = [
       },
     ],
   },
-
   {
     title: "Growth & Media",
     items: [

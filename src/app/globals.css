@@ -46,7 +46,6 @@ body {
   }
 }
 
-
 @keyframes imx-translate-x {
   0% {
     transform: translateX(-20px);
@@ -61,76 +60,288 @@ body {
   animation: imx-translate-x 2s linear infinite;
 }
 
+@keyframes imxSpin {
+  from {
+    transform: rotate(0deg);
+  }
 
- @keyframes imxSpin {
-          from {
-            transform: rotate(0deg);
-          }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-          to {
-            transform: rotate(360deg);
-          }
-        }
+@keyframes imxSpinReverse {
+  from {
+    transform: rotateX(65deg) rotateZ(0deg);
+  }
 
-        @keyframes imxSpinReverse {
-          from {
-            transform: rotateX(65deg) rotateZ(0deg);
-          }
+  to {
+    transform: rotateX(65deg) rotateZ(-360deg);
+  }
+}
 
-          to {
-            transform: rotateX(65deg) rotateZ(-360deg);
-          }
-        }
+@keyframes imxFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 
-        @keyframes imxFloat {
-          0%,
-          100% {
-            transform: translate3d(0, 0, 0);
-          }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
 
-          50% {
-            transform: translate3d(0, -12px, 0);
-          }
-        }
+@keyframes imxNodeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-        @keyframes imxNodeFloat {
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes imxCoreFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotateZ(2deg);
+  }
+}
+
+@keyframes imxPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    box-shadow: 0 0 5px #737a1a;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 18px #737a1a;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.industries-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 55px 55px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+
+.industry-card {
+  transform-style: preserve-3d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 25px 80px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 500ms ease,
+    border-color 500ms ease,
+    background 500ms ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-8px) translateZ(25px);
+  border-color: rgba(115, 122, 26, 0.35);
+  background: rgba(115, 122, 26, 0.07);
+}
+
+/* Education */
+.industry-card-education {
+  left: 3%;
+  top: 17%;
+  transform: translateZ(70px) rotate(-6deg);
+  animation: industryFloatOne 7s ease-in-out infinite;
+}
+
+/* Commerce */
+.industry-card-commerce {
+  right: 2%;
+  top: 16%;
+  transform: translateZ(40px) rotate(5deg);
+  animation: industryFloatTwo 8s ease-in-out infinite;
+}
+
+/* Business */
+.industry-card-business {
+  left: 3%;
+  bottom: 12%;
+  transform: translateZ(50px) rotate(5deg);
+  animation: industryFloatThree 7.5s ease-in-out infinite;
+}
+
+/* Healthcare */
+.industry-card-health {
+  right: 2%;
+  bottom: 11%;
+  transform: translateZ(80px) rotate(-5deg);
+  animation: industryFloatFour 8.5s ease-in-out infinite;
+}
+
+@keyframes industryFloatOne {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -12px;
+  }
+}
+
+@keyframes industryFloatTwo {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 14px;
+  }
+}
+
+@keyframes industryFloatThree {
+  0%,
+  100% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 13px;
+  }
+}
+
+@keyframes industryFloatFour {
+  0%,
+  100% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: -12px;
+  }
+}
+
+@keyframes industry-ring {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes industry-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+.animate-industry-ring {
+  animation: industry-ring 18s linear infinite;
+}
+
+.animate-industry-pulse {
+  animation: industry-pulse 2.5s ease-in-out infinite;
+}
+
+@media (max-width: 1024px) {
+  .industry-card {
+    width: 155px;
+  }
+
+  .industry-card-education {
+    left: 0;
+  }
+
+  .industry-card-commerce {
+    right: 0;
+  }
+
+  .industry-card-business {
+    left: 0;
+  }
+
+  .industry-card-health {
+    right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .industry-card {
+    width: 135px;
+    padding: 14px;
+  }
+
+  .industry-card-education {
+    left: 0;
+    top: 14%;
+  }
+
+  .industry-card-commerce {
+    right: 0;
+    top: 14%;
+  }
+
+  .industry-card-business {
+    left: 0;
+    bottom: 13%;
+  }
+
+  .industry-card-health {
+    right: 0;
+    bottom: 13%;
+  }
+}
+
+
+ @keyframes pricingFloat {
           0%,
           100% {
             transform: translateY(0);
           }
 
           50% {
-            transform: translateY(-9px);
+            transform: translateY(-8px);
           }
         }
 
-        @keyframes imxCoreFloat {
+        @keyframes pricingPulse {
           0%,
           100% {
-            transform: translateY(0) rotateZ(0deg);
-          }
-
-          50% {
-            transform: translateY(-10px) rotateZ(2deg);
-          }
-        }
-
-        @keyframes imxPulse {
-          0%,
-          100% {
-            opacity: 0.35;
-            box-shadow: 0 0 5px #737a1a;
+            opacity: 0.4;
+            transform: scale(1);
           }
 
           50% {
             opacity: 1;
-            box-shadow: 0 0 18px #737a1a;
+            transform: scale(1.35);
           }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
+        @media (prefers-reduced-motion: no-preference) {
+          .pricing-float {
+            animation: pricingFloat 5s ease-in-out infinite;
+          }
+
+          .pricing-pulse {
+            animation: pricingPulse 2.8s ease-in-out infinite;
           }
         }
+ 
