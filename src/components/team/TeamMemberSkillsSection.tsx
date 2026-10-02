@@ -144,7 +144,7 @@ export default function TeamMemberSkillsSection() {
 
           <div className="flex shrink-0 items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.2em] text-white/30">
             <span className="h-1.5 w-1.5 rounded-full bg-[#737A1A]" />
-            IMX Creative Tech
+            IMX Digital Studio
           </div>
         </div>
       </div>

@@ -214,7 +214,7 @@ export default function WorkHero() {
             </p>
 
             <p className="mt-2 text-sm text-white/65">
-              IMX Creative Tech
+              IMX Digital Studio
             </p>
           </div>
         </div>

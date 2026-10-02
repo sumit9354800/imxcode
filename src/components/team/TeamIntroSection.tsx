@@ -81,7 +81,7 @@ export default function TeamIntroSection() {
           </p>
 
           <span className="hidden text-[9px] uppercase tracking-[0.18em] text-black/30 sm:block">
-            IMX Creative Tech
+            IMX Digital Studio
           </span>
         </div>
       </div>

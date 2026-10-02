@@ -118,7 +118,7 @@ export default function TeamHero() {
                   width={110}
                   height={110}
                   priority
-                  alt="IMX Creative Tech"
+                  alt="IMX Digital Studio"
                   className="h-20 w-20 object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.25)] sm:h-24 sm:w-24"
                 />
               </div>

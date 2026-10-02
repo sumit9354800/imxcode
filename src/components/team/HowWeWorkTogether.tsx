@@ -104,7 +104,7 @@ export default function HowWeWorkTogether() {
           </p>
 
           <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-black/30">
-            IMX Creative Tech
+            IMX Digital Studio
           </span>
         </div>
       </div>

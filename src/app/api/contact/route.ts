@@ -139,7 +139,7 @@ export async function POST(request: Request) {
                     margin-bottom: 12px;
                   "
                 >
-                  IMX Creative Tech
+                  IMX Digital Studio
                 </div>
 
                 <h1
@@ -280,7 +280,7 @@ export async function POST(request: Request) {
                     color: #888888;
                   "
                 >
-                  This enquiry was submitted through the IMX Creative Tech
+                  This enquiry was submitted through the IMX Digital Studio
                   website.
                 </div>
 
