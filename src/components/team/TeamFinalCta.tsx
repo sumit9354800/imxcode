@@ -39,7 +39,7 @@ export default function TeamFinalCta() {
           </div>
 
           <span className="hidden text-[9px] uppercase tracking-[0.2em] text-white/20 sm:block">
-            IMX Digital Studio
+            IMX Creative Tech
           </span>
         </div>
 

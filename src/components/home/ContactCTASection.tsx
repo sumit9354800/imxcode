@@ -93,7 +93,7 @@ export default function ContactCTASection() {
         {/* Bottom line */}
         <div className="mt-24 flex flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[10px] uppercase tracking-[0.24em] text-white">
-            IMX Digital Studio
+            IMX Creative Tech
           </p>
 
           <p className="text-[10px] uppercase tracking-[0.24em] text-white">

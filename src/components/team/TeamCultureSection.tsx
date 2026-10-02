@@ -85,7 +85,7 @@ export default function TeamCultureSection() {
           </p>
 
           <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-black/25">
-            IMX Digital Studio
+            IMX Creative Tech
           </span>
         </div>
       </div>

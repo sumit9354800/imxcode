@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "IMX Digital Studio | Web Development, UI/UX Design & Digital Experiences",
-    template: "%s | IMX Digital Studio",
+      "IMX Creative Tech | Web Development, UI/UX Design & Digital Experiences",
+    template: "%s | IMX Creative Tech",
   },
 
   description:
-    "IMX Digital Studio is a digital agency building premium websites, digital products, UI/UX experiences and creative solutions for businesses, startups, education and e-commerce brands.",
+    "IMX Creative Tech is a digital agency building premium websites, digital products, UI/UX experiences and creative solutions for businesses, startups, education and e-commerce brands.",
 
-  applicationName: "IMX Digital Studio",
+  applicationName: "IMX Creative Tech",
 
   keywords: [
-    "IMX Digital Studio",
+    "IMX Creative Tech",
     "digital agency India",
     "web development agency India",
     "web design agency India",
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "IMX Digital Studio",
+      name: "IMX Creative Tech",
       url: "https://imxcode.in",
     },
   ],
 
-  creator: "IMX Digital Studio",
-  publisher: "IMX Digital Studio",
+  creator: "IMX Creative Tech",
+  publisher: "IMX Creative Tech",
 
   category: "technology",
 
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://imxcode.in",
-    siteName: "IMX Digital Studio",
+    siteName: "IMX Creative Tech",
     title:
-      "IMX Digital Studio | Web Development, UI/UX Design & Digital Experiences",
+      "IMX Creative Tech | Web Development, UI/UX Design & Digital Experiences",
     description:
       "Premium websites, digital products, UI/UX experiences and creative digital solutions built for businesses, startups, education and e-commerce brands.",
     locale: "en_IN",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "IMX Digital Studio",
+        alt: "IMX Creative Tech",
       },
     ],
   },
@@ -96,9 +96,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "IMX Digital Studio | Web Development, UI/UX Design & Digital Experiences",
+      "IMX Creative Tech | Web Development, UI/UX Design & Digital Experiences",
     description:
-      "Premium websites, digital products, UI/UX experiences and creative digital solutions by IMX Digital Studio.",
+      "Premium websites, digital products, UI/UX experiences and creative digital solutions by IMX Creative Tech.",
     images: ["/og-image.png"],
   },
 

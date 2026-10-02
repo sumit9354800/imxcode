@@ -65,7 +65,7 @@ export default function WorkFinalCta() {
             </p>
 
             <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-              IMX Digital Studio
+              IMX Creative Tech
             </p>
           </div>
         </div>

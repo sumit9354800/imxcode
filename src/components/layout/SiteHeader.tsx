@@ -18,11 +18,11 @@ export default function SiteHeader() {
         <Link
           href="/"
           className="group flex items-center"
-          aria-label="IMX Digital Studio home"
+          aria-label="IMX Creative Tech home"
         >
           <Image
             src="/icons/navbar-light-log.png"
-            alt="IMX Digital Studio"
+            alt="IMX Creative Tech"
             width={110}
             height={40}
             priority

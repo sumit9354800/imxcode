@@ -2,7 +2,7 @@ export const teamIntro = {
   eyebrow: "Who we are",
   title: "We are a small team with a big digital point of view.",
   description:
-    "IMX Digital Studio brings together developers, designers and creative minds to build digital experiences that are thoughtful, useful and built to last.",
+    "IMX Creative Tech brings together developers, designers and creative minds to build digital experiences that are thoughtful, useful and built to last.",
   disciplines: [
     {
       number: "01",

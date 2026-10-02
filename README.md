@@ -1,4 +1,4 @@
-# IMX Digital Studio
+# IMX Creative Tech
 
 Premium digital studio website built with Next.js, TypeScript and Tailwind CSS.
 

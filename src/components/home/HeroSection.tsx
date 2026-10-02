@@ -295,7 +295,7 @@ export default function HeroSection() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Image
                       src="/icons/favicon-light.png"
-                      alt="IMX Digital Studio"
+                      alt="IMX Creative Tech"
                       width={110}
                       height={110}
                       className="h-[76px] w-auto object-contain"

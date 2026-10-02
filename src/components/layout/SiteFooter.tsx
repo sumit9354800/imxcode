@@ -13,11 +13,11 @@ export default function SiteFooter() {
             <Link
               href="/"
               className="inline-flex items-center"
-              aria-label="IMX Digital Studio home"
+              aria-label="IMX Creative Tech home"
             >
               <Image
                 src="/icons/footer-light-log.png"
-                alt="IMX Digital Studio"
+                alt="IMX Creative Tech"
                 width={110}
                 height={40}
                 className="h-10 w-auto object-contain"
@@ -71,7 +71,7 @@ export default function SiteFooter() {
         {/* Bottom */}
         <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[10px] uppercase tracking-[0.2em] text-white/20">
-            © {new Date().getFullYear()} IMX Digital Studio
+            © {new Date().getFullYear()} IMX Creative Tech
           </p>
 
           <div className="flex items-center gap-5">
