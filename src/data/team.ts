@@ -28,7 +28,7 @@ export type TeamMember = {
 export const teamMembers: TeamMember[] = [
   {
     id: "sumit-shrivastava",
-    name: "Sumit Shrivastava",
+    name: "Sumit",
     role: "Full Stack Developer",
     shortBio:
       "Builds scalable digital products across frontend, backend and modern web technologies.",
@@ -167,7 +167,7 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "anuj-shrivastava",
-    name: "Anuj Shrivastava",
+    name: "Anuj",
     role: "Full Stack Developer",
     shortBio:
       "Develops modern web applications with a focus on performance, usability and scalable architecture.",
@@ -215,7 +215,7 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "shubham-shrivastava",
-    name: "Shubham Shrivastava",
+    name: "Shubham",
     role: "UI/UX & Graphic Designer",
     shortBio:
       "Creates visual systems and interfaces that balance aesthetics, clarity and usability.",
@@ -243,7 +243,7 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "amit-shrivastava",
-    name: "Amit Shrivastava",
+    name: "Amit",
     role: "UI/UX & Graphic Designer",
     shortBio:
       "Designs interfaces, graphics and visual experiences with a strong focus on detail.",
@@ -296,7 +296,7 @@ export const teamMembers: TeamMember[] = [
     shortBio:
       "Creates visual content, motion graphics and edits that bring ideas to life.",
     bio: "Anish works across graphic design and video editing, creating visual content for brands, digital campaigns and creative projects.",
-    image: "/team/anish.jpeg",
+    image: "/team/anish1.jpeg",
     location: "India",
     experience: "2+ Years",
     skills: [

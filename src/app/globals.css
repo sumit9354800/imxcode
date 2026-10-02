@@ -60,3 +60,77 @@ body {
 .imx-translate-x {
   animation: imx-translate-x 2s linear infinite;
 }
+
+
+ @keyframes imxSpin {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes imxSpinReverse {
+          from {
+            transform: rotateX(65deg) rotateZ(0deg);
+          }
+
+          to {
+            transform: rotateX(65deg) rotateZ(-360deg);
+          }
+        }
+
+        @keyframes imxFloat {
+          0%,
+          100% {
+            transform: translate3d(0, 0, 0);
+          }
+
+          50% {
+            transform: translate3d(0, -12px, 0);
+          }
+        }
+
+        @keyframes imxNodeFloat {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-9px);
+          }
+        }
+
+        @keyframes imxCoreFloat {
+          0%,
+          100% {
+            transform: translateY(0) rotateZ(0deg);
+          }
+
+          50% {
+            transform: translateY(-10px) rotateZ(2deg);
+          }
+        }
+
+        @keyframes imxPulse {
+          0%,
+          100% {
+            opacity: 0.35;
+            box-shadow: 0 0 5px #737a1a;
+          }
+
+          50% {
+            opacity: 1;
+            box-shadow: 0 0 18px #737a1a;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+          }
+        }
