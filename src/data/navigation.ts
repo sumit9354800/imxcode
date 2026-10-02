@@ -19,30 +19,25 @@ export const navigation: NavigationItem[] = [
     href: "/",
   },
   {
+    label: "About",
+    href: "/about",
+  },
+  {
     label: "Work",
     href: "/work",
   },
-
   {
     label: "Services",
     href: "/services",
   },
-
   {
     label: "Industries",
     href: "/industries",
   },
-
-  {
-    label: "Studio",
-    href: "/about",
-  },
-
   {
     label: "Team",
     href: "/team",
   },
-
   {
     label: "Insights",
     href: "/insights",
@@ -57,17 +52,14 @@ export const serviceGroups: ServiceGroup[] = [
         label: "Website Development",
         href: "/services/website-development",
       },
-
       {
         label: "Web Applications",
         href: "/services/web-application-development",
       },
-
       {
         label: "E-commerce",
         href: "/services/ecommerce-development",
       },
-
       {
         label: "Admin Panels",
         href: "/services/custom-admin-panels",
@@ -82,17 +74,14 @@ export const serviceGroups: ServiceGroup[] = [
         label: "UI/UX Design",
         href: "/services/ui-ux-design",
       },
-
       {
         label: "Landing Page Design",
         href: "/services/landing-page-design",
       },
-
       {
         label: "Branding",
         href: "/services/branding",
       },
-
       {
         label: "Graphic Design",
         href: "/services/graphic-design",
@@ -107,17 +96,14 @@ export const serviceGroups: ServiceGroup[] = [
         label: "SEO",
         href: "/services/seo",
       },
-
       {
         label: "Video Editing",
         href: "/services/video-editing",
       },
-
       {
         label: "Motion Graphics",
         href: "/services/motion-graphics",
       },
-
       {
         label: "Website Maintenance",
         href: "/services/website-maintenance",
