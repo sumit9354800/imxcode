@@ -362,7 +362,7 @@ export default function ContactFormSection() {
                   <div className="mt-6 grid gap-3">
                     {/* Email */}
                     <a
-                      href="mailto:hello@imxdigitalstudio.com"
+                      href="mailto:imxcode0102@gmail.com"
                       className="
             group flex items-center justify-between
             rounded-xl
@@ -403,7 +403,7 @@ export default function ContactFormSection() {
 
                     {/* Phone */}
                     <a
-                      href="tel:+919999999999"
+                      href="tel:+917678289882"
                       className="
             group flex items-center justify-between
             rounded-xl
