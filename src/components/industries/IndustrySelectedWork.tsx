@@ -23,28 +23,51 @@ export default function IndustrySelectedWork() {
 
   return (
     <section className="relative overflow-hidden bg-white text-black">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-32">
+      {/* Ambient background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#737A1A]/8 blur-[140px]" />
+
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0,0,0,0.8) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0,0,0,0.8) 1px, transparent 1px)
+            `,
+            backgroundSize: "72px 72px",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
         {/* Header */}
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-7 border-b border-black/10 pb-9 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-[#737A1A]" />
 
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#737A1A]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#737A1A] sm:text-xs">
                 Selected Work
               </span>
             </div>
 
-            <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-[0.96] tracking-[-0.05em] sm:text-5xl lg:text-7xl">
+            <h2 className="mt-5 max-w-4xl text-[clamp(2.6rem,5.2vw,5.5rem)] font-semibold leading-[0.88] tracking-[-0.065em]">
               Real projects.
-              <br />
-              Real digital experiences.
+              <span className="block text-[#737A1A]">
+                Real digital experiences.
+              </span>
             </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-6 text-black/45 sm:text-[15px]">
+              A focused selection of digital experiences built across
+              different industries, audiences and business needs.
+            </p>
           </div>
 
+          {/* View all */}
           <Link
             href="/work"
-            className="group inline-flex w-fit shrink-0 items-center gap-3 border-b border-black/20 pb-2 text-sm font-medium transition-colors hover:border-[#737A1A] hover:text-[#737A1A]"
+            className="group inline-flex w-fit shrink-0 items-center gap-3 border-b border-black/20 pb-2 text-xs font-medium uppercase tracking-[0.12em] transition-colors hover:border-[#737A1A] hover:text-[#737A1A]"
           >
             View all work
 
@@ -55,96 +78,116 @@ export default function IndustrySelectedWork() {
           </Link>
         </div>
 
-        <p className="mt-7 max-w-2xl text-sm leading-7 text-black/55 sm:text-base">
-          A selection of digital experiences built across education, business
-          and commerce — showing how our capabilities adapt to different
-          industries.
-        </p>
-
         {/* Projects */}
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-x-4 gap-y-9 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-10">
           {selectedProjects.map((project, index) => {
             if (!project) return null;
 
             return (
-              <article
+              <Link
                 key={project.title}
-                className={`group md:col-span-2" 
-                `}
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block min-w-0"
               >
-                <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  {/* Image */}
-                  <div
-                    className={`relative overflow-hidden bg-[#f1f1ee] ${
-                      index === 0
-                        ? "aspect-[16/8]"
-                        : "aspect-[16/10]"
-                    }`}
-                  >
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes={
-                        index === 0
-                          ? "(max-width: 768px) 100vw, 1200px"
-                          : "(max-width: 768px) 100vw, 600px"
-                      }
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                    />
+                {/* Image Card */}
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#f1f1ee] ring-1 ring-black/[0.06]">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="
+                      (max-width: 640px) 100vw,
+                      (max-width: 1024px) 50vw,
+                      25vw
+                    "
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
 
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
+                  {/* Dark hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 transition-all duration-500 group-hover:bg-black/20" />
 
-                    {/* Industry badge */}
-                    <div className="absolute left-5 top-5 border border-white/20 bg-black/70 px-3 py-2 backdrop-blur-md">
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
-                        {project.industry}
-                      </span>
-                    </div>
-
-                    {/* Arrow */}
-                    <div className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center bg-[#737A1A] text-black opacity-0 transition-all duration-300 group-hover:opacity-100">
-                      <ArrowUpRight
-                        className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                        strokeWidth={1.5}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex items-start justify-between gap-6 border-b border-black/10 py-5">
-                    <div>
-                      <h3 className="text-xl font-medium tracking-[-0.025em] sm:text-2xl">
-                        {project.title}
-                      </h3>
-
-                      <p className="mt-2 text-sm text-black/45">
-                        {project.category}
-                      </p>
-                    </div>
-
-                    <span className="mt-1 shrink-0 text-xs font-medium text-black/25">
-                      0{index + 1}
+                  {/* Top Industry */}
+                  <div className="absolute left-3 top-3">
+                    <span className="rounded-md border border-white/20 bg-black/65 px-2.5 py-1.5 text-[8px] font-semibold uppercase tracking-[0.16em] text-white opacity-100 backdrop-blur-md transition-opacity duration-300 group-hover:bg-[#737A1A] group-hover:text-black">
+                      {project.industry}
                     </span>
                   </div>
-                </Link>
-              </article>
+
+                  {/* Number */}
+                  <span className="absolute right-3 top-3 text-[9px] font-semibold tracking-[0.15em] text-white opacity-0 drop-shadow transition-opacity duration-300 group-hover:opacity-100">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Bottom Hover Details */}
+                  <div className="absolute inset-x-0 bottom-0 translate-y-3 bg-gradient-to-t from-black/95 via-black/70 to-transparent px-4 pb-4 pt-20 opacity-0 transition-all duration-400 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="flex items-end justify-between gap-3">
+                      <div className="min-w-0">
+                        <span className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#c9d06f]">
+                          {project.category}
+                        </span>
+
+                        <h3 className="mt-1 truncate text-base font-medium tracking-[-0.02em] text-white">
+                          {project.title}
+                        </h3>
+
+                        <p className="mt-1 text-[10px] text-white/55">
+                          Explore project
+                        </p>
+                      </div>
+
+                      {/* Arrow */}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#737A1A] text-black transition-transform duration-300 group-hover:rotate-45">
+                        <ArrowUpRight
+                          className="h-4 w-4"
+                          strokeWidth={1.5}
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Project Info */}
+                <div className="flex items-start justify-between gap-3 px-1 pt-3">
+                  <div className="min-w-0">
+                    <h3 className="truncate text-sm font-medium tracking-[-0.02em] transition-colors duration-300 group-hover:text-[#737A1A] sm:text-[15px]">
+                      {project.title}
+                    </h3>
+
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-black/35">
+                      {project.category}
+                    </p>
+                  </div>
+
+                  <span className="shrink-0 pt-0.5 text-[9px] font-medium tracking-[0.12em] text-black/20">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+              </Link>
             );
           })}
         </div>
 
-        {/* Bottom statement */}
-        <div className="mt-14 border-t border-black/10 pt-8">
-          <p className="max-w-3xl text-2xl font-medium leading-tight tracking-[-0.03em] sm:text-3xl">
-            Every industry has a different problem. The right digital
-            experience starts by understanding it.
-          </p>
+        {/* Bottom Statement */}
+        <div className="mt-12 flex flex-col gap-5 border-t border-black/10 pt-7 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#737A1A]">
+              Our approach
+            </span>
+
+            <p className="mt-3 max-w-3xl text-xl font-medium leading-tight tracking-[-0.03em] sm:text-2xl">
+              Different industries.
+              <span className="text-black/35">
+                {" "}
+                Different digital needs.
+              </span>
+            </p>
+          </div>
+
+          <div className="text-[9px] uppercase tracking-[0.2em] text-black/20">
+            {String(selectedProjects.length).padStart(2, "0")} Projects
+          </div>
         </div>
       </div>
     </section>

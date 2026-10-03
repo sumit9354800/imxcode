@@ -24,4 +24,16 @@ export const industrySelectedWork: IndustrySelectedWorkItem[] = [
     title: "United Institute Educational Portal",
     industry: "Education",
   },
+  {
+    title: "MX SAMMY | B2B Sales & Revenue Analytics CRM",
+    industry: "Data Analytics",
+  },
+  {
+    title: "STACKED — Immersive 3D Experience",
+    industry: "Technology",
+  },
+  {
+    title: "FreshCart Organics Web Application",
+    industry: "E-commerce",
+  },
 ];

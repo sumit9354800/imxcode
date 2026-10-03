@@ -1,88 +1,125 @@
-import { ArrowDownRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { teamCultureItems } from "@/data/team-culture";
 
-import { pricingProcess } from "@/data/pricing-process";
-
-export default function PricingProcess() {
+export default function TeamCultureSection() {
   return (
     <section className="relative overflow-hidden bg-white text-black">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-32">
-        {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-[#737A1A]" />
+      {/* Olive atmosphere */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full bg-[#737A1A]/[0.055] blur-[130px]"
+      />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#737A1A]">
-              {pricingProcess.eyebrow}
-            </span>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.018]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(0,0,0,0.8) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,0,0,0.8) 1px, transparent 1px)
+          `,
+          backgroundSize: "72px 72px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-[1600px] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20 xl:px-16">
+        {/* Compact Header */}
+        <div className="grid gap-6 border-b border-black/10 pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-12">
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="h-px w-8 bg-[#737A1A]" />
+
+              <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#737A1A] sm:text-[10px]">
+                Team Culture / Philosophy
+              </p>
+            </div>
+
+            <div className="mt-4 flex items-end gap-3">
+              <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-black/25">
+                {String(teamCultureItems.length).padStart(2, "0")} Principles
+              </span>
+
+              <span className="h-px w-8 bg-black/10" />
+            </div>
           </div>
 
           <div>
-            <h2 className="max-w-4xl text-4xl font-semibold leading-[0.96] tracking-[-0.05em] sm:text-5xl lg:text-7xl">
-              {pricingProcess.title}
+            <h2 className="max-w-4xl text-[clamp(2.6rem,5vw,5.4rem)] font-semibold leading-[0.88] tracking-[-0.075em]">
+              How we think.
+              <span className="text-[#737A1A]"> How we build.</span>
             </h2>
 
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-black/55 sm:text-base">
-              {pricingProcess.description}
+            <p className="mt-5 max-w-2xl text-xs leading-6 text-black/45 sm:text-sm">
+              Our culture shapes how we communicate, collaborate and turn
+              different perspectives into better digital work.
             </p>
           </div>
         </div>
 
-        {/* Process */}
-        <div className="relative mt-16">
-          {/* Connecting line */}
-          <div
-            aria-hidden="true"
-            className="absolute left-[19px] top-10 hidden h-[calc(100%-80px)] w-px bg-black/10 lg:block"
-          />
+        {/* Compact Culture System */}
+        <div className="mt-8 grid border-y border-black/10 sm:grid-cols-2 lg:grid-cols-4">
+          {teamCultureItems.map((item, index) => (
+            <article
+              key={item.number}
+              className={`group relative min-w-0 p-5 transition-colors duration-300 hover:bg-[#737A1A]/[0.035] sm:p-6 lg:p-7 ${
+                index < teamCultureItems.length - 1
+                  ? "border-b border-black/10 lg:border-b-0 lg:border-r"
+                  : ""
+              } ${
+                index === 1
+                  ? "sm:border-r sm:border-black/10 lg:border-r"
+                  : ""
+              }`}
+            >
+              {/* Olive hover line */}
+              <span className="absolute left-0 top-0 h-[2px] w-0 bg-[#737A1A] transition-all duration-500 group-hover:w-full" />
 
-          <div className="grid gap-0 lg:grid-cols-4">
-            {pricingProcess.items.map((item, index) => (
-              <article
-                key={item.number}
-                className="group relative border-t border-black/10 py-8 lg:border-t-0 lg:border-l lg:px-7 lg:py-5 first:lg:border-l-0"
-              >
-                {/* Number */}
-                <div className="flex items-center justify-between lg:block">
-                  <span className="flex h-10 w-10 items-center justify-center border border-black/10 bg-white text-xs font-semibold text-[#737A1A]">
-                    {item.number}
-                  </span>
+              {/* Top */}
+              <div className="flex items-center justify-between">
+                <span className="text-[9px] font-semibold tracking-[0.2em] text-[#737A1A]">
+                  {item.number}
+                </span>
 
-                  <span className="text-[10px] uppercase tracking-[0.18em] text-black/25 lg:mt-6 lg:block">
-                    Step {index + 1}
-                  </span>
-                </div>
+                <ArrowUpRight
+                  size={14}
+                  strokeWidth={1.5}
+                  className="text-black/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#737A1A]"
+                />
+              </div>
 
-                {/* Content */}
-                <h3 className="mt-8 text-2xl font-medium tracking-[-0.03em] transition-colors duration-300 group-hover:text-[#737A1A]">
-                  {item.title}
-                </h3>
+              {/* Title */}
+              <h3 className="mt-7 text-xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-2xl">
+                {item.title}
+              </h3>
 
-                <p className="mt-4 max-w-xs text-sm leading-6 text-black/50">
-                  {item.description}
+              {/* Description */}
+              <p className="mt-3 text-[11px] leading-5 text-black/45 sm:text-xs">
+                {item.description}
+              </p>
+
+              {/* Statement */}
+              <div className="mt-5 flex items-center gap-2 border-t border-black/10 pt-4">
+                <span className="h-1 w-1 shrink-0 rounded-full bg-[#737A1A]" />
+
+                <p className="truncate text-[7px] font-semibold uppercase tracking-[0.17em] text-black/30 transition-colors duration-300 group-hover:text-[#737A1A]">
+                  {item.statement}
                 </p>
-
-                {/* Focus */}
-                <div className="mt-8 flex items-center justify-between border-t border-black/[0.07] pt-4">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-black/30">
-                    {item.focus}
-                  </span>
-
-                  <ArrowDownRight
-                    className="h-4 w-4 text-black/20 transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#737A1A]"
-                    strokeWidth={1.5}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </article>
+          ))}
         </div>
 
-        {/* Bottom statement */}
-        <div className="mt-14 border-t border-black/10 pt-8">
-          <p className="max-w-3xl text-2xl font-medium leading-tight tracking-[-0.03em] sm:text-3xl">
-            You don't pay for a preset package. You invest in the solution
-            your project actually needs.
+        {/* Bottom */}
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[11px] leading-5 text-black/35 sm:text-xs">
+            Different perspectives make better work. We give people room to
+            think, experiment and contribute.
           </p>
+
+          <div className="flex shrink-0 items-center gap-3 text-[8px] font-semibold uppercase tracking-[0.2em] text-black/25">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#737A1A]" />
+            IMX Digital Studio
+          </div>
         </div>
       </div>
     </section>
