@@ -5,43 +5,47 @@ import { creativeItems } from "@/data/creative";
 export default function CreativeShowcaseSection() {
   return (
     <section className="relative overflow-hidden bg-black text-white">
-      {/* Olive ambient glow */}
+      {/* Ambient olive glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-20 h-[420px] w-[420px] rounded-full bg-[#737A1A]/10 blur-[140px]"
+        className="pointer-events-none absolute -right-48 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-[#737A1A]/10 blur-[140px]"
       />
 
-      <div className="relative mx-auto max-w-[1600px] px-6 py-28 sm:px-8 lg:px-12 xl:px-16">
+      <div className="relative mx-auto max-w-[1600px] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16">
         {/* Header */}
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-16">
           <div>
             <div className="flex items-center gap-4">
-              <span className="h-px w-10 bg-[#737A1A]" />
+              <span
+                aria-hidden="true"
+                className="h-px w-10 bg-[#737A1A]"
+              />
 
               <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-white sm:text-xs">
-                Creative capabilities
+                Creative work
               </p>
             </div>
 
-            <h2 className="mt-8 max-w-5xl text-[clamp(3rem,7vw,7.5rem)] font-semibold leading-[0.84] tracking-[-0.075em] text-white">
-              Ideas made
-              <span className="block text-[#737A1A]">visible.</span>
+            <h2 className="mt-6 max-w-3xl text-[clamp(2.8rem,5vw,5.5rem)] font-semibold leading-[0.9] tracking-[-0.065em] text-white">
+              Where ideas become
+              <span className="block text-[#737A1A]">visual.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-sm leading-6 text-white sm:text-base sm:leading-7">
-            From interfaces and brand systems to graphics, video and motion, we
-            create visual experiences that make digital products memorable.
+          <p className="max-w-xl text-sm leading-6 text-white/75 sm:text-base sm:leading-7">
+            We shape interfaces, identities and visual content into a
+            consistent digital presence that people can recognize and
+            remember.
           </p>
         </div>
 
-        {/* Creative Grid */}
-        <div className="mt-20 grid gap-5 sm:grid-cols-2">
+        {/* Creative showcase */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
           {creativeItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group relative overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#0a0a0a] transition-colors duration-300 hover:border-[#737A1A]"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] transition-colors duration-300 hover:border-[#737A1A]"
             >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-[#111]">
@@ -49,73 +53,75 @@ export default function CreativeShowcaseSection() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                 />
 
-                {/* Image overlay */}
-                <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/35" />
+                <div className="absolute inset-0 bg-black/15 transition-colors duration-500 group-hover:bg-black/35" />
 
                 {/* Number */}
-                <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#737A1A] bg-black/60 text-[10px] font-medium text-white backdrop-blur-md">
+                <span className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-[9px] font-medium text-white backdrop-blur-md">
                   {item.number}
-                </div>
+                </span>
 
                 {/* Arrow */}
-                <div
+                <span
+                  aria-hidden="true"
                   className="
-                    absolute right-5 top-5
-                    flex h-11 w-11 items-center justify-center
-                    rounded-full border border-[#737A1A]
-                    bg-[#737A1A] text-white
-                    opacity-0
+                    absolute right-4 top-4 flex h-9 w-9 items-center
+                    justify-center rounded-full border border-[#737A1A]
+                    bg-[#737A1A] text-sm text-white
+                    opacity-0 translate-y-1
                     transition-all duration-300
-                    group-hover:opacity-100
+                    group-hover:translate-y-0 group-hover:opacity-100
                   "
                 >
                   ↗
-                </div>
+                </span>
               </div>
 
               {/* Content */}
-              <div className="flex items-end justify-between gap-5 p-5">
-                <div>
-                  <p className="text-[9px] font-medium uppercase tracking-[0.25em] text-[#737A1A]">
-                    {item.category}
-                  </p>
+              <div className="px-4 py-4 sm:px-5 sm:py-5">
+                <p className="text-[9px] font-medium uppercase tracking-[0.22em] text-[#737A1A]">
+                  {item.category}
+                </p>
 
-                  <h3 className="mt-2 text-2xl font-medium tracking-[-0.04em] text-white">
+                <div className="mt-2 flex items-center justify-between gap-3">
+                  <h3 className="text-lg font-medium tracking-[-0.03em] text-white sm:text-xl">
                     {item.title}
                   </h3>
-                </div>
 
-                <span className="text-sm text-white">Explore</span>
+                  <span
+                    aria-hidden="true"
+                    className="text-white/40 transition-colors duration-300 group-hover:text-[#737A1A]"
+                  >
+                    →
+                  </span>
+                </div>
               </div>
 
               {/* Bottom accent */}
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#737A1A] transition-all duration-500 group-hover:w-full" />
+              <span
+                aria-hidden="true"
+                className="absolute bottom-0 left-0 h-px w-0 bg-[#737A1A] transition-all duration-500 group-hover:w-full"
+              />
             </Link>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 flex justify-end">
+        {/* Compact CTA */}
+        <div className="mt-8 flex justify-end">
           <Link
             href="/services"
             className="
-              group inline-flex items-center gap-3
-              rounded-full
-              border border-white/20
-              px-5 py-3
-              text-xs font-medium
-              text-white
-              transition-colors duration-300
+              group inline-flex items-center gap-3 rounded-full
+              border border-white/15 px-5 py-3 text-xs font-medium
+              text-white transition-colors duration-300
               hover:border-[#737A1A]
               hover:bg-[#737A1A]
-              hover:text-white
             "
           >
-            <span>Explore creative services</span>
+            Explore creative services
 
             <span
               aria-hidden="true"
