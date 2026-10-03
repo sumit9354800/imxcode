@@ -5,82 +5,182 @@ import { aboutCta } from "@/data/about-cta";
 export default function AboutFinalCta() {
   return (
     <section className="relative overflow-hidden bg-[#737A1A] text-black">
-      {/* Decorative background */}
+      {/* =====================================================
+          DECORATIVE BACKGROUND
+      ====================================================== */}
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
       >
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full border border-black/10" />
-        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full border border-black/10" />
-        <div className="absolute -right-8 -top-8 h-48 w-48 rounded-full border border-black/10" />
+        {/* Large rings */}
+
+        <div className="absolute -right-28 -top-28 h-[420px] w-[420px] rounded-full border border-black/10" />
+
+        <div className="absolute -right-16 -top-16 h-[320px] w-[320px] rounded-full border border-black/10" />
+
+        <div className="absolute -right-4 -top-4 h-[220px] w-[220px] rounded-full border border-black/10" />
+
+        {/* Technical lines */}
 
         <div className="absolute bottom-0 left-0 h-px w-full bg-black/10" />
+
         <div className="absolute left-[12%] top-0 h-full w-px bg-black/10" />
+
         <div className="absolute left-[24%] top-0 h-full w-px bg-black/[0.06]" />
+
+        <div className="absolute right-[12%] top-0 hidden h-full w-px bg-black/[0.05] lg:block" />
+
+        {/* Ambient glow */}
+
+        <div className="absolute -bottom-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-white/[0.06] blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[620px] max-w-7xl flex-col justify-between px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[680px] lg:px-10 lg:py-24">
-        {/* Top */}
-        <div className="flex items-start justify-between gap-6">
+      {/* =====================================================
+          MAIN CONTAINER
+      ====================================================== */}
+
+      <div className="relative mx-auto flex min-h-[480px] max-w-[1500px] flex-col justify-between px-6 py-12 sm:min-h-[500px] sm:px-8 sm:py-14 lg:min-h-[530px] lg:px-12 lg:py-16 xl:px-16">
+        {/* =====================================================
+            TOP BAR
+        ====================================================== */}
+
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-black/60" />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.22em]">
+            <span className="font-mono text-[8px] font-semibold uppercase tracking-[0.28em] sm:text-[9px]">
               {aboutCta.eyebrow}
             </span>
           </div>
 
-          <span className="hidden text-xs font-medium tracking-[0.2em] text-black/50 sm:block">
+          <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-black/45 sm:text-[9px]">
             IMX / 01
           </span>
         </div>
 
-        {/* Main */}
-        <div className="max-w-6xl">
-          <h2 className="max-w-5xl text-5xl font-semibold leading-[0.9] tracking-[-0.055em] sm:text-6xl md:text-7xl lg:text-[8.5rem]">
-            {aboutCta.title}
-          </h2>
+        {/* =====================================================
+            MAIN CTA
+        ====================================================== */}
 
-          <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            <p className="max-w-xl text-sm leading-7 text-black/65 sm:text-base">
-              {aboutCta.description}
-            </p>
+        <div className="mt-14 lg:mt-16">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-14">
+            {/* Heading */}
 
-            <div className="flex shrink-0 flex-col gap-4 sm:flex-row">
-              <Link
-                href={aboutCta.primaryAction.href}
-                className="group inline-flex items-center justify-center gap-3 bg-black px-6 py-4 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-1"
-              >
-                {aboutCta.primaryAction.label}
+            <div>
+              <div className="mb-5 flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-black/70" />
 
-                <ArrowUpRight
-                  className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                  strokeWidth={1.5}
-                />
-              </Link>
+                <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-black/45">
+                  Start something meaningful
+                </span>
+              </div>
 
-              <Link
-                href={aboutCta.secondaryAction.href}
-                className="group inline-flex items-center justify-center gap-3 border border-black/30 px-6 py-4 text-sm font-medium transition-colors duration-300 hover:border-black"
-              >
-                {aboutCta.secondaryAction.label}
+              <h2 className="max-w-5xl text-[clamp(3rem,6.5vw,7rem)] font-semibold leading-[0.86] tracking-[-0.08em]">
+                {aboutCta.title}
+              </h2>
+            </div>
 
-                <ArrowUpRight
-                  className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                  strokeWidth={1.5}
-                />
-              </Link>
+            {/* Description + Actions */}
+
+            <div className="lg:pb-1">
+              <p className="max-w-xl text-sm leading-6 text-black/60 sm:text-[15px] sm:leading-7">
+                {aboutCta.description}
+              </p>
+
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                {/* Primary */}
+
+                <Link
+                  href={aboutCta.primaryAction.href}
+                  className="
+                    group
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-3
+                    bg-black
+                    px-5
+                    py-3.5
+                    text-xs
+                    font-medium
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                  "
+                >
+                  {aboutCta.primaryAction.label}
+
+                  <ArrowUpRight
+                    className="
+                      h-4
+                      w-4
+                      transition-transform
+                      duration-300
+                      group-hover:-translate-y-1
+                      group-hover:translate-x-1
+                    "
+                    strokeWidth={1.5}
+                  />
+                </Link>
+
+                {/* Secondary */}
+
+                <Link
+                  href={aboutCta.secondaryAction.href}
+                  className="
+                    group
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-3
+                    border
+                    border-black/30
+                    px-5
+                    py-3.5
+                    text-xs
+                    font-medium
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-black
+                    hover:bg-black/[0.04]
+                  "
+                >
+                  {aboutCta.secondaryAction.label}
+
+                  <ArrowUpRight
+                    className="
+                      h-4
+                      w-4
+                      transition-transform
+                      duration-300
+                      group-hover:-translate-y-1
+                      group-hover:translate-x-1
+                    "
+                    strokeWidth={1.5}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col gap-4 border-t border-black/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <span className="text-xs font-medium uppercase tracking-[0.18em] text-black/50">
-            Technology · Design · Creative
-          </span>
+        {/* =====================================================
+            BOTTOM META
+        ====================================================== */}
 
-          <span className="text-xs font-medium uppercase tracking-[0.18em] text-black/50">
+        <div className="mt-14 flex flex-col gap-4 border-t border-black/15 pt-5 sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-black/60" />
+
+            <span className="font-mono text-[7px] font-semibold uppercase tracking-[0.2em] text-black/45">
+              Technology · Design · Creative
+            </span>
+          </div>
+
+          <span className="font-mono text-[7px] font-semibold uppercase tracking-[0.2em] text-black/45">
             Built by IMX
           </span>
         </div>

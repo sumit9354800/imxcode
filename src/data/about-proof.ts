@@ -6,9 +6,9 @@ export type AboutProofItem = {
 
 export const aboutProof = {
   eyebrow: "Numbers / Proof",
-  title: "The work speaks through what we build.",
+  title: "Our experience in numbers.",
   description:
-    "Our experience comes from building real digital products, working across different industries and bringing technology, design and creative execution together.",
+    "Our experience comes from building digital products across different industries and bringing technology, design and creative execution together.",
 
   stats: [
     {
@@ -38,5 +38,5 @@ export const aboutProof = {
   ] satisfies AboutProofItem[],
 
   statement:
-    "We measure our work by the experiences we create, the problems we solve and the value we help businesses move toward.",
+    "We measure our work by the problems we solve, the experiences we create and the value we help businesses move toward.",
 };

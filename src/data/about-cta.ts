@@ -2,7 +2,7 @@ export const aboutCta = {
   eyebrow: "Let's build something meaningful",
   title: "Have an idea? Let's turn it into something real.",
   description:
-    "Whether you are starting something new, improving an existing product or looking for a digital partner, let's talk about what comes next.",
+    "Tell us what you're building, what you're trying to improve and where you want to go next.",
   primaryAction: {
     label: "Start a conversation",
     href: "/contact",

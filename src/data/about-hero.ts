@@ -1,10 +1,10 @@
 export const aboutHero = {
   eyebrow: "About IMX",
-  title: "We build digital experiences with purpose.",
+  title: "A digital team built around ideas.",
   description:
-    "IMX Digital Studio brings technology, design and creative thinking together to build digital experiences that help businesses move forward.",
+    "IMX brings technology, design and creative thinking together to build digital experiences that are useful, distinctive and built to move businesses forward.",
   primaryAction: {
-    label: "Explore our work",
+    label: "our work",
     href: "/work",
   },
   secondaryAction: {

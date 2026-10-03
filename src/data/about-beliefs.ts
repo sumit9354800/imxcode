@@ -5,40 +5,40 @@ export type AboutBeliefItem = {
 };
 
 export const aboutBeliefs = {
-  eyebrow: "What We Believe",
-  title: "Good digital work starts with good thinking.",
+  eyebrow: "Our Beliefs",
+  title: "How we think shapes what we build.",
   description:
-    "Our principles shape the way we design, develop and collaborate — from the first idea to the final product.",
+    "We believe better digital work comes from clarity, thoughtful decisions and a balance between technology, design and business goals.",
   items: [
     {
       number: "01",
-      title: "Clarity over complexity",
+      title: "Start with the problem",
       description:
-        "The best solutions are not necessarily the most complicated ones. We look for clarity in strategy, design and technology.",
+        "Before building anything, we understand what needs to be solved and who it needs to work for.",
     },
     {
       number: "02",
-      title: "Design should serve purpose",
+      title: "Make complexity clear",
       description:
-        "Visuals matter, but great design also makes products easier to understand, navigate and use.",
+        "Good design and technology should make things easier, not more complicated.",
     },
     {
       number: "03",
-      title: "Technology should create value",
+      title: "Design with purpose",
       description:
-        "We choose technology because it solves a problem, improves performance or creates a better experience — not simply because it is new.",
+        "Every visual decision should support the experience, the brand or the user's next action.",
     },
     {
       number: "04",
-      title: "Details make the difference",
+      title: "Build for real use",
       description:
-        "Small interactions, spacing, performance improvements and thoughtful decisions can transform the quality of a digital product.",
+        "We care about performance, responsiveness, maintainability and how a product works beyond the first launch.",
     },
     {
       number: "05",
-      title: "Build for what comes next",
+      title: "Keep improving",
       description:
-        "We think beyond launch and create foundations that can evolve as the business, users and product grow.",
+        "Digital products should evolve with the people, businesses and ideas behind them.",
     },
   ],
 };

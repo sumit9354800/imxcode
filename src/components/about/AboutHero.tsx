@@ -139,14 +139,14 @@ export default function AboutHero() {
 
             <h1 className="max-w-5xl text-[clamp(3.5rem,7.5vw,8rem)] font-semibold leading-[0.82] tracking-[-0.085em]">
 
-              We build
+              A digital 
 
               <span className="block text-[#737A1A]">
-                digital experiences
+               team built
               </span>
 
               <span className="block">
-                with purpose.
+               around ideas.
               </span>
 
             </h1>

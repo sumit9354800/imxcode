@@ -1,28 +1,28 @@
 export const aboutWhoWeAre = {
   eyebrow: "Who we are",
-  title: "A digital team built around technology, design and ideas.",
+  title: "We bring different disciplines into one digital team.",
   description:
-    "IMX Digital Studio brings developers, designers and creative minds together to build digital experiences that solve real business problems.",
+    "IMX combines development, design and creative expertise to solve digital problems from different perspectives — without separating strategy, design and execution.",
   statement:
-    "We don't just build what looks good. We build what works, performs and creates value.",
+    "Good digital work is not only about how it looks. It should work, perform and create value.",
   capabilities: [
     {
       number: "01",
       title: "Technology",
       description:
-        "Modern websites, web applications and digital systems engineered for performance and scalability.",
+        "We build websites, applications and digital systems designed around real business needs.",
     },
     {
       number: "02",
       title: "Design",
       description:
-        "Interfaces and experiences designed around clarity, usability and strong visual direction.",
+        "We create clear interfaces, visual identities and experiences that make products easier to understand and use.",
     },
     {
       number: "03",
       title: "Creative",
       description:
-        "Graphic, visual and motion work that gives brands a distinctive digital presence.",
+        "We use graphics, video and motion to give digital experiences a stronger visual presence.",
     },
   ],
 };
