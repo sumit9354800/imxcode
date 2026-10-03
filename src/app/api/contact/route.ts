@@ -10,8 +10,10 @@ export async function POST(request: Request) {
     const {
       name,
       email,
+      company,
       phone,
       service,
+      projectType,
       message,
       verificationCode,
       website,
@@ -24,6 +26,9 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // Support both existing Home form and Contact page
+    const selectedService = service || projectType;
 
     // Required fields
     if (!name || !email || !message || !verificationCode) {
@@ -45,6 +50,27 @@ export async function POST(request: Request) {
       );
     }
 
+    if (company && typeof company !== "string") {
+      return NextResponse.json(
+        { message: "Invalid company data." },
+        { status: 400 }
+      );
+    }
+
+    if (phone && typeof phone !== "string") {
+      return NextResponse.json(
+        { message: "Invalid phone number." },
+        { status: 400 }
+      );
+    }
+
+    if (selectedService && typeof selectedService !== "string") {
+      return NextResponse.json(
+        { message: "Invalid service selection." },
+        { status: 400 }
+      );
+    }
+
     if (name.length > 100) {
       return NextResponse.json(
         { message: "Name is too long." },
@@ -55,6 +81,20 @@ export async function POST(request: Request) {
     if (email.length > 150) {
       return NextResponse.json(
         { message: "Email is too long." },
+        { status: 400 }
+      );
+    }
+
+    if (company && company.length > 150) {
+      return NextResponse.json(
+        { message: "Company name is too long." },
+        { status: 400 }
+      );
+    }
+
+    if (phone && phone.length > 30) {
+      return NextResponse.json(
+        { message: "Phone number is too long." },
         { status: 400 }
       );
     }
@@ -123,6 +163,7 @@ export async function POST(request: Request) {
               "
             >
 
+              <!-- Header -->
               <div
                 style="
                   padding: 32px;
@@ -135,7 +176,7 @@ export async function POST(request: Request) {
                     font-size: 12px;
                     letter-spacing: 4px;
                     text-transform: uppercase;
-                    color: #888888;
+                    color: #737A1A;
                     margin-bottom: 12px;
                   "
                 >
@@ -153,8 +194,10 @@ export async function POST(request: Request) {
                 </h1>
               </div>
 
+              <!-- Content -->
               <div style="padding: 32px;">
 
+                <!-- Name -->
                 <div style="margin-bottom: 24px;">
                   <div
                     style="
@@ -178,6 +221,7 @@ export async function POST(request: Request) {
                   </div>
                 </div>
 
+                <!-- Email -->
                 <div style="margin-bottom: 24px;">
                   <div
                     style="
@@ -197,8 +241,34 @@ export async function POST(request: Request) {
                 </div>
 
                 ${
+                  company
+                    ? `
+                      <!-- Company -->
+                      <div style="margin-bottom: 24px;">
+                        <div
+                          style="
+                            font-size: 11px;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            color: #888888;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Company
+                        </div>
+
+                        <div style="font-size: 17px;">
+                          ${escapeHtml(company)}
+                        </div>
+                      </div>
+                    `
+                    : ""
+                }
+
+                ${
                   phone
                     ? `
+                      <!-- Phone -->
                       <div style="margin-bottom: 24px;">
                         <div
                           style="
@@ -221,8 +291,9 @@ export async function POST(request: Request) {
                 }
 
                 ${
-                  service
+                  selectedService
                     ? `
+                      <!-- Service -->
                       <div style="margin-bottom: 24px;">
                         <div
                           style="
@@ -237,13 +308,14 @@ export async function POST(request: Request) {
                         </div>
 
                         <div style="font-size: 17px;">
-                          ${escapeHtml(service)}
+                          ${escapeHtml(selectedService)}
                         </div>
                       </div>
                     `
                     : ""
                 }
 
+                <!-- Project Details -->
                 <div style="margin-bottom: 8px;">
                   <div
                     style="
@@ -271,6 +343,7 @@ export async function POST(request: Request) {
                   ${escapeHtml(message)}
                 </div>
 
+                <!-- Footer -->
                 <div
                   style="
                     margin-top: 32px;

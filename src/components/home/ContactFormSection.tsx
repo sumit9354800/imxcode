@@ -362,7 +362,7 @@ export default function ContactFormSection() {
                   <div className="mt-6 grid gap-3">
                     {/* Email */}
                     <a
-                      href="mailto:imxcode0102@gmail.com"
+                      href="mailto:contact@imxcode.in"
                       className="
             group flex items-center justify-between
             rounded-xl
@@ -381,7 +381,7 @@ export default function ContactFormSection() {
                         </span>
 
                         <p className="mt-1 text-sm font-medium text-black/75">
-                          imxcode0102@gmail.com
+                          contact@imxcode.in
                         </p>
                       </div>
 

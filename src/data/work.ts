@@ -1,7 +1,15 @@
+export type WorkService =
+  | "Web Development"
+  | "UI/UX Design"
+  | "Graphic Design"
+  | "Branding"
+  | "Video & Motion";
+
 export type WorkProject = {
   id: string;
   title: string;
   category: string;
+  service: WorkService;
   year: string;
   role: string;
   description: string;
@@ -21,6 +29,7 @@ export type WorkProject = {
 
 export const workProjects: WorkProject[] = [
   {
+    service: "Web Development",
     id: "proj-1",
     title: "FOSTIIMA Business School Website",
     category: "Full-Stack Development / Institutional Website",
@@ -62,6 +71,7 @@ export const workProjects: WorkProject[] = [
     order: 10,
   },
   {
+    service: "Web Development",
     id: "proj-2",
     title: "MRTECHYCOOL Business Website",
     category: "Client Project / Commercial",
@@ -97,6 +107,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-3",
     title: "Growje Business Website",
     category: "Client Project / Commercial",
@@ -132,6 +143,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-4",
     title: "United Institute Educational Portal",
     category: "Commercial / Education",
@@ -167,6 +179,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-5",
     title: "MX SAMMY | B2B Sales & Revenue Analytics CRM",
     category: "Full Stack / SaaS CRM",
@@ -203,6 +216,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-6",
     title: "STACKED — Immersive 3D Experience",
     category: "Creative Engineering / 3D Web",
@@ -231,6 +245,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-7",
     title: "KiranaGo — Grocery E-commerce",
     category: "Web Application / Hyperlocal Delivery",
@@ -259,6 +274,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-8",
     title: "FreshCart Organics Web Application",
     category: "E-Commerce Application",
@@ -294,6 +310,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-9",
     title: "Airbnb Clone — Full-Stack Rental Platform",
     category: "Web Application / Architecture Study",
@@ -329,6 +346,7 @@ export const workProjects: WorkProject[] = [
   },
 
   {
+    service: "Web Development",
     id: "proj-10",
     title: "Myntra Fashion E-Commerce UI",
     category: "Frontend Engineering / UI Reproduction",
