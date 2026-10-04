@@ -292,7 +292,7 @@ export const workProjects: WorkProject[] = [
     ],
     image:
       "https://res.cloudinary.com/njq5pi5g/image/upload/v1788944300/freshcart.png",
-    liveUrl: "https://freshcart-organics.vercel.app/",
+    liveUrl: "https://cloth-ecommerce-frontend.vercel.app/",
     githubUrl: "https://github.com/sumit9354800/freshcart",
     challenges:
       "Handling complex price per weight calculations and dynamic promo discounts.",
