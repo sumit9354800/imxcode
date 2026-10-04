@@ -345,15 +345,14 @@ export const teamMembers: TeamMember[] = [
     ],
     projects: [],
   },
-
   {
-    id: "rohit",
-    name: "Rohit",
+    id: "aditya sharma",
+    name: "Aditya Sharma",
     role: "Full Stack Developer",
     shortBio:
       "Builds scalable digital products across frontend, backend and modern web technologies.",
-    bio: "Rohit works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
-    image: "/team/rohit.png",
+    bio: "Aditya works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
+    image: "/team/aditya.png",
     location: "India",
     experience: "2+ Years",
     skills: [
@@ -393,14 +392,15 @@ export const teamMembers: TeamMember[] = [
     tools: ["Git", "GitHub", "VS Code", "Figma", "Vercel"],
     projects: [],
   },
-    {
-    id: "aditya sharma",
-    name: "Aditya Sharma",
+
+  {
+    id: "rohit",
+    name: "Rohit",
     role: "Full Stack Developer",
     shortBio:
       "Builds scalable digital products across frontend, backend and modern web technologies.",
-    bio: "Aditya works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
-    image: "/team/aditya.png",
+    bio: "Rohit works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
+    image: "/team/rohit.png",
     location: "India",
     experience: "2+ Years",
     skills: [
