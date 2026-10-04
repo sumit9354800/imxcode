@@ -183,7 +183,7 @@ export default function TestimonialsSection() {
                 3D CLIENT CORE
             ================================================== */}
 
-            <div className="relative flex min-h-[330px] items-center justify-center sm:min-h-[380px] lg:min-h-[430px]">
+           <div className="relative hidden min-h-[330px] items-center justify-center lg:flex lg:min-h-[430px]">
               {/* Large faint number */}
               <span
                 aria-hidden="true"

@@ -28,7 +28,7 @@ export type TeamMember = {
 export const teamMembers: TeamMember[] = [
   {
     id: "sumit-shrivastava",
-    name: "Sumit",
+    name: "Sumit Shrivastava",
     role: "Full Stack Developer",
     shortBio:
       "Builds scalable digital products across frontend, backend and modern web technologies.",
@@ -167,12 +167,12 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "anuj-shrivastava",
-    name: "Anuj",
+    name: "Anuj Shrivastava",
     role: "Full Stack Developer",
     shortBio:
       "Develops modern web applications with a focus on performance, usability and scalable architecture.",
     bio: "Anuj works across frontend and backend development, helping turn product ideas into reliable and maintainable digital experiences.",
-    image: "/team/anuj.jpeg",
+    image: "/team/anuj.png",
     location: "India",
     experience: "2+ Years",
     skills: [
@@ -215,12 +215,12 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "shubham-shrivastava",
-    name: "Shubham",
+    name: "Shubham Shrivastava",
     role: "UI/UX & Graphic Designer",
     shortBio:
       "Creates visual systems and interfaces that balance aesthetics, clarity and usability.",
     bio: "Shubham focuses on UI/UX and graphic design, shaping visual identities and digital interfaces that communicate clearly and feel distinctive.",
-    image: "/team/shubham.jpeg",
+    image: "/team/shubham01.png",
     location: "India",
     experience: "2+ Years",
     skills: [
@@ -243,7 +243,7 @@ export const teamMembers: TeamMember[] = [
 
   {
     id: "amit-shrivastava",
-    name: "Amit",
+    name: "Amit Shrivastava",
     role: "UI/UX & Graphic Designer",
     shortBio:
       "Designs interfaces, graphics and visual experiences with a strong focus on detail.",
@@ -290,8 +290,8 @@ export const teamMembers: TeamMember[] = [
   },
 
   {
-    id: "anish",
-    name: "Anish",
+    id: "anish-shrivastava",
+    name: "Anish Shrivastava",
     role: "Graphic & Video Editor",
     shortBio:
       "Creates visual content, motion graphics and edits that bring ideas to life.",
@@ -343,6 +343,101 @@ export const teamMembers: TeamMember[] = [
       "Adobe Premiere Pro",
       "Adobe After Effects",
     ],
+    projects: [],
+  },
+
+  {
+    id: "rohit",
+    name: "Rohit",
+    role: "Full Stack Developer",
+    shortBio:
+      "Builds scalable digital products across frontend, backend and modern web technologies.",
+    bio: "Rohit works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
+    image: "/team/rohit.png",
+    location: "India",
+    experience: "2+ Years",
+    skills: [
+      {
+        name: "React",
+        level: "Expert",
+      },
+      {
+        name: "Next.js",
+        level: "Expert",
+      },
+      {
+        name: "TypeScript",
+        level: "Advanced",
+      },
+      {
+        name: "JavaScript",
+        level: "Expert",
+      },
+      {
+        name: "Node.js",
+        level: "Advanced",
+      },
+      {
+        name: "Express.js",
+        level: "Advanced",
+      },
+      {
+        name: "MongoDB",
+        level: "Advanced",
+      },
+      {
+        name: "MySQL",
+        level: "Advanced",
+      },
+    ],
+    tools: ["Git", "GitHub", "VS Code", "Figma", "Vercel"],
+    projects: [],
+  },
+    {
+    id: "aditya sharma",
+    name: "Aditya Sharma",
+    role: "Full Stack Developer",
+    shortBio:
+      "Builds scalable digital products across frontend, backend and modern web technologies.",
+    bio: "Aditya works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
+    image: "/team/aditya.png",
+    location: "India",
+    experience: "2+ Years",
+    skills: [
+      {
+        name: "React",
+        level: "Expert",
+      },
+      {
+        name: "Next.js",
+        level: "Expert",
+      },
+      {
+        name: "TypeScript",
+        level: "Advanced",
+      },
+      {
+        name: "JavaScript",
+        level: "Expert",
+      },
+      {
+        name: "Node.js",
+        level: "Advanced",
+      },
+      {
+        name: "Express.js",
+        level: "Advanced",
+      },
+      {
+        name: "MongoDB",
+        level: "Advanced",
+      },
+      {
+        name: "MySQL",
+        level: "Advanced",
+      },
+    ],
+    tools: ["Git", "GitHub", "VS Code", "Figma", "Vercel"],
     projects: [],
   },
 ];
