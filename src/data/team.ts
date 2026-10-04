@@ -393,6 +393,54 @@ export const teamMembers: TeamMember[] = [
     projects: [],
   },
 
+    {
+    id: "sourav",
+    name: "sourav",
+    role: "Full Stack Developer",
+    shortBio:
+      "Builds scalable digital products across frontend, backend and modern web technologies.",
+    bio: "Sourav works across the full digital product lifecycle, from interface architecture and frontend development to backend systems and deployment.",
+    image: "/team/sourav.png",
+    location: "India",
+    experience: "2+ Years",
+    skills: [
+      {
+        name: "React",
+        level: "Expert",
+      },
+      {
+        name: "Next.js",
+        level: "Expert",
+      },
+      {
+        name: "TypeScript",
+        level: "Advanced",
+      },
+      {
+        name: "JavaScript",
+        level: "Expert",
+      },
+      {
+        name: "Node.js",
+        level: "Advanced",
+      },
+      {
+        name: "Express.js",
+        level: "Advanced",
+      },
+      {
+        name: "MongoDB",
+        level: "Advanced",
+      },
+      {
+        name: "MySQL",
+        level: "Advanced",
+      },
+    ],
+    tools: ["Git", "GitHub", "VS Code", "Figma", "Vercel"],
+    projects: [],
+  },
+
   {
     id: "rohit",
     name: "Rohit",
