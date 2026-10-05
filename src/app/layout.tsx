@@ -95,6 +95,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+    
     title:
       "IMX Digital Studio | Web Development, UI/UX Design & Digital Experiences",
     description:
