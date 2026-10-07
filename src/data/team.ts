@@ -355,7 +355,7 @@ export const teamMembers: TeamMember[] = [
     projects: [],
   },
   {
-    id: "aditya sharma",
+    id: "aditya-sharma",
     name: "Aditya Sharma",
     role: "Full Stack Developer",
     shortBio:
