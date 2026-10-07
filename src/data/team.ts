@@ -162,6 +162,15 @@ export const teamMembers: TeamMember[] = [
           "https://res.cloudinary.com/njq5pi5g/image/upload/v1788944402/myntra.png",
         href: "https://cloth-ecommerce-frontend-uhj7.vercel.app/",
       },
+      {
+        title: "India Travel Safari — Premium Goa Holiday Landing Page",
+        category: "Frontend Engineering / Travel & Tourism",
+        description:
+          "Premium conversion-focused Goa holiday landing page built for India Travel Safari, featuring a cinematic Goa hero section, 5 nights / 6 days itinerary, premium and standard package comparison, travel inclusions, upgrades, FAQs, WhatsApp and call CTAs, and a responsive mobile-first experience.",
+        image:
+          "https://res.cloudinary.com/njq5pi5g/image/upload/v1791392566/Screenshot_2026-10-07_at_10.30.43_PM.png",
+        href: "https://travel.indiatravelsafari.com/",
+      },
     ],
   },
 
