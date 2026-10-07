@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
@@ -95,7 +96,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    
+
     title:
       "IMX Digital Studio | Web Development, UI/UX Design & Digital Experiences",
     description:
@@ -104,7 +105,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/icon.png", 
+    icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
@@ -118,6 +119,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
+
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MB2QH6T4');
+          `}
+        </Script>
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MB2QH6T4"
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
+
         <SiteHeader />
 
         {children}
