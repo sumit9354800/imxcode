@@ -25,8 +25,6 @@ export type WorkProject = {
   order: number;
 };
 
-
-
 export const workProjects: WorkProject[] = [
   {
     service: "Web Development",
@@ -47,7 +45,8 @@ export const workProjects: WorkProject[] = [
       "Cloudinary",
       "Node.js",
     ],
-    image: "https://res.cloudinary.com/njq5pi5g/image/upload/v1790754959/Screenshot_2026-09-30_at_1.24.47_PM.png",
+    image:
+      "https://res.cloudinary.com/njq5pi5g/image/upload/v1790754959/Screenshot_2026-09-30_at_1.24.47_PM.png",
     liveUrl: "https://fostiima.org/",
     githubUrl: "https://github.com/sumit9354800/fostiima",
     challenges:
@@ -374,46 +373,46 @@ export const workProjects: WorkProject[] = [
     order: 9,
   },
   {
-  service: "Web Development",
-  id: "proj-11",
-  title: "India Travel Safari — Premium Goa Holiday Landing Page",
-  category: "Frontend Engineering / Travel & Tourism",
-  year: "2026",
-  role: "Frontend Engineer",
-  description:
-    "Premium conversion-focused Goa holiday landing page built for India Travel Safari, featuring a cinematic Goa hero section, 5 nights / 6 days itinerary, premium and standard package comparison, travel inclusions, upgrades, FAQs, WhatsApp and call CTAs, and a responsive mobile-first experience.",
-  technologies: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Lucide React",
-    "Responsive Design"
-  ],
-  image:
-    "https://res.cloudinary.com/qrmztvyx/image/upload/v1791380906/Screenshot_2026-10-07_at_7.16.07_PM.png",
-  liveUrl: "https://travel.indiatravelsafari.com/",
-  githubUrl: "https://github.com/sumit9354800/goa-holiday",
-  challenges:
-    "Creating a premium travel experience that balances strong visual storytelling, detailed itinerary information, package pricing, and lead-generation CTAs without making the landing page feel overcrowded.",
-  solution:
-    "Built a structured responsive layout with a cinematic Goa hero, dedicated itinerary cards, premium package highlighting, visual content sections, reusable CTA components, responsive navigation, and direct WhatsApp and phone conversion paths.",
-  features: [
-    "Cinematic Goa Hero Section",
-    "5 Nights / 6 Days Interactive Travel Presentation",
-    "Premium & Standard Package Comparison",
-    "Day-wise Goa Itinerary Cards",
-    "North Goa & South Goa Experiences",
-    "Dudhsagar Waterfall Experience",
-    "Water Sports & Sunset Cruise Section",
-    "WhatsApp Lead Generation CTA",
-    "Direct Call CTA",
-    "Responsive Mobile Navigation",
-    "FAQ Section",
-    "Google Tag Manager Integration"
-  ],
-  featured: true,
-  published: true,
-  order: 10,
-},
+    service: "Web Development",
+    id: "proj-11",
+    title: "India Travel Safari — Premium Goa Holiday Landing Page",
+    category: "Frontend Engineering / Travel & Tourism",
+    year: "2026",
+    role: "Frontend Engineer",
+    description:
+      "Premium conversion-focused Goa holiday landing page built for India Travel Safari, featuring a cinematic Goa hero section, 5 nights / 6 days itinerary, premium and standard package comparison, travel inclusions, upgrades, FAQs, WhatsApp and call CTAs, and a responsive mobile-first experience.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Lucide React",
+      "Responsive Design",
+    ],
+    image:
+      "https://res.cloudinary.com/njq5pi5g/image/upload/v1791392566/Screenshot_2026-10-07_at_10.30.43_PM.png",
+    liveUrl: "https://travel.indiatravelsafari.com/",
+    githubUrl: "https://github.com/sumit9354800/goa-holiday",
+    challenges:
+      "Creating a premium travel experience that balances strong visual storytelling, detailed itinerary information, package pricing, and lead-generation CTAs without making the landing page feel overcrowded.",
+    solution:
+      "Built a structured responsive layout with a cinematic Goa hero, dedicated itinerary cards, premium package highlighting, visual content sections, reusable CTA components, responsive navigation, and direct WhatsApp and phone conversion paths.",
+    features: [
+      "Cinematic Goa Hero Section",
+      "5 Nights / 6 Days Interactive Travel Presentation",
+      "Premium & Standard Package Comparison",
+      "Day-wise Goa Itinerary Cards",
+      "North Goa & South Goa Experiences",
+      "Dudhsagar Waterfall Experience",
+      "Water Sports & Sunset Cruise Section",
+      "WhatsApp Lead Generation CTA",
+      "Direct Call CTA",
+      "Responsive Mobile Navigation",
+      "FAQ Section",
+      "Google Tag Manager Integration",
+    ],
+    featured: true,
+    published: true,
+    order: 10,
+  },
 ];
