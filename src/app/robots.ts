@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://imxcode.in/sitemap.xml",
+    sitemap: "https://www.imxcode.in/sitemap.xml",
   };
 }
