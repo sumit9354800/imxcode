@@ -129,3 +129,16 @@ export const brandingProcess: BrandingProcessStep[] = [
       "We organize the final identity and guidelines so the brand can be used consistently across every relevant touchpoint.",
   },
 ];
+
+export type BrandingWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const brandingWorkProjects: BrandingWorkProject[] = [];

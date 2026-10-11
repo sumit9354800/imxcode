@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { workProjects } from "@/data/work";
+import { adminPanelWorkProjects } from "@/data/services/custom-admin-panels";
 
 export default function AdminPanelWork() {
-  const projects = workProjects
-    .filter((project) => project.published)
-    .slice(0, 3);
+  const projects = adminPanelWorkProjects.slice(0, 3);
 
   return (
     <section className="relative overflow-hidden bg-black text-white">
@@ -32,7 +30,9 @@ export default function AdminPanelWork() {
             <h2 className="max-w-4xl text-[clamp(2.5rem,5vw,5.4rem)] font-semibold leading-[0.9] tracking-[-0.06em]">
               Systems designed
               <br />
-              <span className="text-[#737A1A]">to make work easier.</span>
+              <span className="text-[#737A1A]">
+                to make work easier.
+              </span>
             </h2>
 
             <Link
@@ -49,88 +49,133 @@ export default function AdminPanelWork() {
           </div>
         </div>
 
-        {/* Projects */}
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <Link
-              key={project.id}
-              href="/work"
-              className="group block"
-            >
-              <article>
-                {/* Visual */}
-                <div className="relative aspect-[1.15] overflow-hidden border border-white/10 bg-[#090909]">
-                  {project.image ? (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,#111,#050505)]" />
-                  )}
+        {/* Projects / Coming Soon */}
+        {projects.length > 0 ? (
+          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <Link
+                key={project.id}
+                href="/work"
+                className="group block"
+              >
+                <article>
+                  {/* Visual */}
+                  <div className="relative aspect-[1.15] overflow-hidden border border-white/10 bg-[#090909]">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-[linear-gradient(135deg,#111,#050505)]" />
+                    )}
 
-                  <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/15" />
+                    <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/15" />
 
-                  <span className="absolute left-5 top-5 text-[9px] font-medium tracking-[0.2em] text-white/60">
-                    0{index + 1}
-                  </span>
+                    <span className="absolute left-5 top-5 text-[9px] font-medium tracking-[0.2em] text-white/60">
+                      0{index + 1}
+                    </span>
 
-                  <span className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center border border-white/15 bg-black/30 backdrop-blur-sm transition-all duration-300 group-hover:border-[#737A1A] group-hover:bg-[#737A1A] group-hover:text-black">
-                    <ArrowUpRight
-                      size={16}
-                      strokeWidth={1.5}
-                      className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
-                  </span>
-                </div>
-
-                {/* Project information */}
-                <div className="mt-5 border-t border-white/10 pt-4">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-[#737A1A]">
-                        {project.category}
-                      </span>
-
-                      <span className="h-1 w-1 rounded-full bg-white/20" />
-
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-white/30">
-                        {project.year}
-                      </span>
-                    </div>
-
-                    <span className="text-[9px] uppercase tracking-[0.16em] text-white/25">
-                      {project.role}
+                    <span className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center border border-white/15 bg-black/30 backdrop-blur-sm transition-all duration-300 group-hover:border-[#737A1A] group-hover:bg-[#737A1A] group-hover:text-black">
+                      <ArrowUpRight
+                        size={16}
+                        strokeWidth={1.5}
+                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      />
                     </span>
                   </div>
 
-                  <h3 className="mt-3 text-xl font-medium tracking-[-0.03em] transition-colors duration-300 group-hover:text-[#737A1A] sm:text-2xl">
-                    {project.title}
-                  </h3>
+                  {/* Project information */}
+                  <div className="mt-5 border-t border-white/10 pt-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[#737A1A]">
+                          {project.category}
+                        </span>
 
-                  <p className="mt-2 max-w-sm text-sm leading-6 text-white/40">
-                    {project.description}
-                  </p>
-                </div>
+                        <span className="h-1 w-1 rounded-full bg-white/20" />
 
-                {/* Technologies */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.technologies.slice(0, 4).map((technology) => (
-                    <span
-                      key={technology}
-                      className="border border-white/10 px-2.5 py-1 text-[8px] uppercase tracking-[0.14em] text-white/35"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-white/30">
+                          {project.year}
+                        </span>
+                      </div>
+
+                      <span className="text-[9px] uppercase tracking-[0.16em] text-white/25">
+                        {project.role}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-3 text-xl font-medium tracking-[-0.03em] transition-colors duration-300 group-hover:text-[#737A1A] sm:text-2xl">
+                      {project.title}
+                    </h3>
+
+                    <p className="mt-2 max-w-sm text-sm leading-6 text-white/40">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {/* Technologies */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 4).map((technology) => (
+                      <span
+                        key={technology}
+                        className="border border-white/10 px-2.5 py-1 text-[8px] uppercase tracking-[0.14em] text-white/35"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          /* Coming Soon */
+          <div className="mt-14 overflow-hidden border border-white/10 bg-[#090909]">
+            <div className="relative flex min-h-[360px] items-center justify-center px-6 py-16 text-center sm:min-h-[420px]">
+              {/* Decorative elements */}
+              <div className="pointer-events-none absolute left-[10%] top-[18%] h-24 w-24 rounded-full border border-[#737A1A]/20" />
+
+              <div className="pointer-events-none absolute bottom-[14%] right-[10%] h-32 w-32 rounded-full border border-white/10" />
+
+              <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+
+              <div className="relative z-10 max-w-xl">
+                <span className="inline-flex border border-[#737A1A]/40 bg-[#737A1A]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#737A1A]">
+                  Coming Soon
+                </span>
+
+                <h3 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+                  Our admin panel work
+                  <span className="block text-[#737A1A]">
+                    is on the way.
+                  </span>
+                </h3>
+
+                <p className="mx-auto mt-5 max-w-md text-sm leading-6 text-white/40 sm:text-base">
+                  We’re currently preparing a selection of custom admin
+                  panels and business systems. Check back soon to explore the
+                  work.
+                </p>
+
+                <Link
+                  href="/work"
+                  className="group mt-8 inline-flex items-center gap-2 bg-[#737A1A] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#858C20]"
+                >
+                  Explore our work
+
+                  <ArrowUpRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Mobile link */}
         <div className="mt-8 sm:hidden">
@@ -139,6 +184,7 @@ export default function AdminPanelWork() {
             className="group inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50 transition-colors hover:text-white"
           >
             View all work
+
             <ArrowUpRight
               size={15}
               strokeWidth={1.5}

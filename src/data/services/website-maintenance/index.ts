@@ -129,3 +129,16 @@ export const websiteMaintenanceProcess: WebsiteMaintenanceProcessStep[] = [
       "We continue monitoring the website and provide ongoing support as new issues, requirements and opportunities appear.",
   },
 ];
+
+export type WebsiteMaintenanceWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const websiteMaintenanceWorkProjects: WebsiteMaintenanceWorkProject[] = [];

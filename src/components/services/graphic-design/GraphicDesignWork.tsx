@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { workProjects } from "@/data/work";
+import { graphicDesignWorkProjects } from "@/data/services/graphic-design";
 
 export default function GraphicDesignWork() {
-  const projects = workProjects
-    .filter((project) => project.published)
-    .slice(0, 3);
+  const projects = graphicDesignWorkProjects.slice(0, 3);
 
   return (
     <section className="bg-[#f7f7f4] px-6 py-20 text-black sm:px-8 lg:px-10 lg:py-28">
@@ -37,70 +35,113 @@ export default function GraphicDesignWork() {
           </Link>
         </div>
 
-        {/* Projects */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="group overflow-hidden rounded-[1.75rem] border border-black/10 bg-white"
-            >
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-black">
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex h-full items-end p-6">
-                    <span className="text-7xl font-semibold tracking-[-0.08em] text-white/10">
-                      0{index + 1}
+        {/* Projects / Coming Soon */}
+        {projects.length > 0 ? (
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <article
+                key={project.id}
+                className="group overflow-hidden rounded-[1.75rem] border border-black/10 bg-white"
+              >
+                {/* Image */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-black">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full items-end p-6">
+                      <span className="text-7xl font-semibold tracking-[-0.08em] text-white/10">
+                        0{index + 1}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur">
+                    {project.category}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 sm:p-7">
+                  <div className="flex items-start justify-between gap-5">
+                    <div>
+                      <p className="text-xs text-black/35">
+                        {project.year}
+                      </p>
+
+                      <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em]">
+                        {project.title}
+                      </h3>
+                    </div>
+
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 transition group-hover:border-[#737A1A] group-hover:bg-[#737A1A] group-hover:text-white">
+                      <ArrowUpRight size={15} />
                     </span>
                   </div>
-                )}
 
-                <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur">
-                  {project.category}
-                </div>
-              </div>
+                  <p className="mt-4 line-clamp-3 text-sm leading-6 text-black/55">
+                    {project.description}
+                  </p>
 
-              {/* Content */}
-              <div className="p-6 sm:p-7">
-                <div className="flex items-start justify-between gap-5">
-                  <div>
-                    <p className="text-xs text-black/35">
-                      {project.year}
-                    </p>
-
-                    <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em]">
-                      {project.title}
-                    </h3>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 3).map((technology) => (
+                      <span
+                        key={technology}
+                        className="rounded-full border border-black/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] text-black/45"
+                      >
+                        {technology}
+                      </span>
+                    ))}
                   </div>
-
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 transition group-hover:border-[#737A1A] group-hover:bg-[#737A1A] group-hover:text-white">
-                    <ArrowUpRight size={15} />
-                  </span>
                 </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-14 overflow-hidden rounded-[1.75rem] border border-black/10 bg-black">
+            <div className="relative flex min-h-[360px] items-center justify-center px-6 py-16 text-center sm:min-h-[420px]">
+              {/* Decorative elements */}
+              <div className="pointer-events-none absolute left-[12%] top-[18%] h-24 w-24 rounded-full border border-[#737A1A]/20" />
 
-                <p className="mt-4 line-clamp-3 text-sm leading-6 text-black/55">
-                  {project.description}
+              <div className="pointer-events-none absolute bottom-[15%] right-[12%] h-32 w-32 rounded-full border border-white/10" />
+
+              <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+
+              <div className="relative z-10 max-w-xl">
+                <span className="inline-flex rounded-full border border-[#737A1A]/40 bg-[#737A1A]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#737A1A]">
+                  Coming Soon
+                </span>
+
+                <h3 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+                  Our graphic design work
+                  <span className="block text-[#737A1A]">
+                    is on the way.
+                  </span>
+                </h3>
+
+                <p className="mx-auto mt-5 max-w-md text-sm leading-6 text-white/45 sm:text-base">
+                  We’re currently preparing a selection of graphic design
+                  projects. Check back soon to explore the work.
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.technologies.slice(0, 3).map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-full border border-black/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] text-black/45"
-                    >
-                      {technology}
-                    </span>
-                  ))}
-                </div>
+                <Link
+                  href="/work"
+                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#737A1A] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#858C20]"
+                >
+                  Explore our work
+
+                  <ArrowUpRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </Link>
               </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </div>
+        )}
 
         {/* Bottom statement */}
         <div className="mt-12 flex flex-col gap-3 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
@@ -110,7 +151,7 @@ export default function GraphicDesignWork() {
           </p>
 
           <span className="text-xs uppercase tracking-[0.18em] text-[#737A1A]">
-            Selected projects
+            {projects.length > 0 ? "Selected projects" : "Work in progress"}
           </span>
         </div>
       </div>

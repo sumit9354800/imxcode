@@ -129,3 +129,16 @@ export const landingPageProcess: LandingPageProcessStep[] = [
       "We optimize the final experience for performance, connect tracking and prepare it for real campaign traffic.",
   },
 ];
+
+export type LandingPageWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const landingPageWorkProjects: LandingPageWorkProject[] = [];

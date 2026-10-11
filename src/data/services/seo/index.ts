@@ -129,3 +129,16 @@ export const seoProcess: SeoProcessStep[] = [
       "We monitor meaningful search signals, identify new opportunities and continuously refine the SEO strategy.",
   },
 ];
+
+export type SeoWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const seoWorkProjects: SeoWorkProject[] = [];

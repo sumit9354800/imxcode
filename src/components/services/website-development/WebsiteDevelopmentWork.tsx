@@ -3,7 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 import { workProjects } from "@/data/work";
 
 export default function WebsiteDevelopmentWork() {
- const projects = workProjects.filter((project) => project.published);
+  const projects = workProjects
+    .filter((project) => project.published)
+    .slice(0, 4);
 
   return (
     <section className="relative overflow-hidden bg-black text-white">
@@ -78,110 +80,145 @@ export default function WebsiteDevelopmentWork() {
         </div>
 
         {/* =================================================
-            PROJECT GRID
+            PROJECT GRID / COMING SOON
         ================================================== */}
 
-        <div className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-          {projects.map((project, index) => (
-            <Link
-              key={project.id}
-              href={`/work/${project.id}`}
-              className="group block min-w-0"
-            >
-              {/* =================================================
-                  IMAGE CARD
-              ================================================== */}
+        {projects.length > 0 ? (
+          <div className="mt-9 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+            {projects.map((project, index) => (
+              <Link
+                key={project.id}
+                href={`/work/${project.id}`}
+                className="group block min-w-0"
+              >
+                {/* Image Card */}
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-white/10">
+                  {/* Image */}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,#111,#050505)]" />
+                  )}
 
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white/[0.04] ring-1 ring-white/10">
-                {/* Image */}
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/10 transition-opacity duration-500 group-hover:bg-black/35" />
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-                />
+                  {/* Subtle olive glow */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#737A1A]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                {/* Dark overlay */}
+                  {/* Top Meta */}
+                  <div className="absolute left-3 top-3">
+                    <span className="rounded-full border border-white/15 bg-black/35 px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/75 backdrop-blur-md">
+                      {project.category}
+                    </span>
+                  </div>
 
-                <div className="absolute inset-0 bg-black/10 transition-opacity duration-500 group-hover:bg-black/35" />
+                  <div className="absolute right-3 top-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-black/35 font-mono text-[8px] text-white/60 backdrop-blur-md">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
 
-                {/* Subtle olive glow */}
+                  {/* Hover Details */}
+                  <div className="absolute inset-x-0 bottom-0 translate-y-3 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:p-4">
+                    <div className="flex items-end justify-between gap-3">
+                      <div className="min-w-0">
+                        <span className="text-[8px] font-medium uppercase tracking-[0.18em] text-[#c9ce82]">
+                          {project.year}
+                        </span>
 
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#737A1A]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <h3 className="mt-1 truncate text-[17px] font-medium tracking-[-0.035em] text-white">
+                          {project.title}
+                        </h3>
+                      </div>
 
-                {/* =================================================
-                    TOP META
-                ================================================== */}
-
-                <div className="absolute left-3 top-3">
-                  <span className="rounded-full border border-white/15 bg-black/35 px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/75 backdrop-blur-md">
-                    {project.category}
-                  </span>
-                </div>
-
-                <div className="absolute right-3 top-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-black/35 font-mono text-[8px] text-white/60 backdrop-blur-md">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                {/* =================================================
-                    HOVER DETAILS
-                ================================================== */}
-
-                <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-3 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:p-4">
-                  <div className="flex items-end justify-between gap-3">
-                    <div className="min-w-0">
-                      <span className="text-[8px] font-medium uppercase tracking-[0.18em] text-[#c9ce82]">
-                        {project.year}
-                      </span>
-
-                      <h3 className="mt-1 truncate text-[17px] font-medium tracking-[-0.035em] text-white">
-                        {project.title}
-                      </h3>
-                    </div>
-
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#737A1A] text-white">
-                      <ArrowUpRight
-                        size={15}
-                        strokeWidth={1.5}
-                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      />
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#737A1A] text-white">
+                        <ArrowUpRight
+                          size={15}
+                          strokeWidth={1.5}
+                          className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        />
+                      </div>
                     </div>
                   </div>
+
+                  {/* Corner focus line */}
+                  <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#737A1A] transition-all duration-500 group-hover:w-full" />
                 </div>
 
-                {/* Corner focus line */}
+                {/* Project Info */}
+                <div className="px-1 pt-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="min-w-0 truncate text-[15px] font-medium tracking-[-0.02em] text-white/90 transition-colors duration-300 group-hover:text-white">
+                      {project.title}
+                    </h3>
 
-                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#737A1A] transition-all duration-500 group-hover:w-full" />
-              </div>
+                    <span className="shrink-0 text-[9px] uppercase tracking-[0.15em] text-white/25">
+                      {project.year}
+                    </span>
+                  </div>
 
-              {/* =================================================
-                  PROJECT INFO
-              ================================================== */}
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="h-px w-5 bg-[#737A1A]/70 transition-all duration-300 group-hover:w-8" />
 
-              <div className="px-1 pt-3">
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="min-w-0 truncate text-[15px] font-medium tracking-[-0.02em] text-white/90 transition-colors duration-300 group-hover:text-white">
-                    {project.title}
-                  </h3>
+                    <span className="truncate text-[8px] uppercase tracking-[0.15em] text-white/25">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          /* =================================================
+              COMING SOON
+          ================================================== */
 
-                  <span className="shrink-0 text-[9px] uppercase tracking-[0.15em] text-white/25">
-                    {project.year}
+          <div className="mt-9 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025]">
+            <div className="relative flex min-h-[360px] items-center justify-center px-6 py-16 text-center sm:min-h-[420px]">
+              {/* Decorative elements */}
+              <div className="pointer-events-none absolute left-[10%] top-[18%] h-24 w-24 rounded-full border border-[#737A1A]/20" />
+
+              <div className="pointer-events-none absolute bottom-[14%] right-[10%] h-32 w-32 rounded-full border border-white/10" />
+
+              <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+
+              <div className="relative z-10 max-w-xl">
+                <span className="inline-flex rounded-full border border-[#737A1A]/40 bg-[#737A1A]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#737A1A]">
+                  Coming Soon
+                </span>
+
+                <h3 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+                  Our website development work
+                  <span className="block text-[#737A1A]">
+                    is on the way.
                   </span>
-                </div>
+                </h3>
 
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="h-px w-5 bg-[#737A1A]/70 transition-all duration-300 group-hover:w-8" />
+                <p className="mx-auto mt-5 max-w-md text-sm leading-6 text-white/40 sm:text-base">
+                  We’re currently preparing a selection of websites and
+                  digital experiences. Check back soon to explore the work.
+                </p>
 
-                  <span className="truncate text-[8px] uppercase tracking-[0.15em] text-white/25">
-                    {project.category}
-                  </span>
-                </div>
+                <Link
+                  href="/work"
+                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#737A1A] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#858C20]"
+                >
+                  Explore our work
+
+                  <ArrowUpRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </Link>
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          </div>
+        )}
 
         {/* =================================================
             BOTTOM SYSTEM
@@ -197,7 +234,9 @@ export default function WebsiteDevelopmentWork() {
           </div>
 
           <span className="font-mono text-[9px] tracking-[0.15em] text-white/20">
-            04 PROJECTS
+            {projects.length > 0
+              ? `${String(projects.length).padStart(2, "0")} PROJECTS`
+              : "WORK IN PROGRESS"}
           </span>
         </div>
       </div>

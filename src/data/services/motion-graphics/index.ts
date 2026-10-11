@@ -129,3 +129,16 @@ export const motionGraphicsProcess: MotionGraphicsProcessStep[] = [
       "We polish the animation, review the final result and prepare optimized outputs for the intended platforms.",
   },
 ];
+
+export type MotionGraphicsWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const motionGraphicsWorkProjects: MotionGraphicsWorkProject[] = [];

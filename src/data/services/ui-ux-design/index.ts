@@ -129,3 +129,16 @@ export const uiUxProcess: UiUxProcessStep[] = [
       "We prototype, review and refine the experience before handing a clear design system into development.",
   },
 ];
+
+export type UiUxWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const uiUxWorkProjects: UiUxWorkProject[] = [];

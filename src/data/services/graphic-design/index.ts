@@ -129,3 +129,16 @@ export const graphicDesignProcess: GraphicDesignProcessStep[] = [
       "We prepare the final assets for their intended platforms and maintain consistency across the complete set.",
   },
 ];
+
+export type GraphicDesignWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const graphicDesignWorkProjects: GraphicDesignWorkProject[] = [];

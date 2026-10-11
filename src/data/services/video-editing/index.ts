@@ -129,3 +129,16 @@ export const videoEditingProcess: VideoEditingProcessStep[] = [
       "We review the final cut, make refinements and prepare optimized exports for the intended platforms.",
   },
 ];
+
+export type VideoEditingWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const videoEditingWorkProjects: VideoEditingWorkProject[] = [];

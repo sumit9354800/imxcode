@@ -129,3 +129,16 @@ export const adminPanelProcess: AdminPanelProcessStep[] = [
       "We test real workflows, simplify repetitive actions and prepare the panel for everyday use.",
   },
 ];
+
+export type AdminPanelWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const adminPanelWorkProjects: AdminPanelWorkProject[] = [];

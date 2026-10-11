@@ -129,3 +129,16 @@ export const webApplicationProcess: WebApplicationProcessStep[] = [
       "We test critical workflows, refine the experience and prepare the application for production.",
   },
 ];
+
+export type WebApplicationWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const webApplicationWorkProjects: WebApplicationWorkProject[] = [];

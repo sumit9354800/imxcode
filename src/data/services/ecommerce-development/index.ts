@@ -129,3 +129,16 @@ export const ecommerceProcess: EcommerceProcessStep[] = [
       "We test the complete purchasing journey, prepare the store for launch and identify opportunities for continued improvement.",
   },
 ];
+
+export type EcommerceWorkProject = {
+  id: string;
+  title: string;
+  category: string;
+  year: string;
+  role: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+};
+
+export const ecommerceWorkProjects: EcommerceWorkProject[] = [];
