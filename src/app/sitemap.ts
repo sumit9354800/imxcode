@@ -1,13 +1,14 @@
+
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://imxcode.in";
+  const baseUrl = "https://www.imxcode.in";
   const lastModified = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
@@ -59,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
   ];
 
