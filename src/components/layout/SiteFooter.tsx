@@ -13,7 +13,7 @@ const whatsappUrl = "https://wa.me/917780819304";
 const instagramUrl = "https://www.instagram.com/imxcode0102/";
 
 // Replace this with the actual deployed India Travel Safari landing page URL.
-const landingPageUrl = "https://www.imxcode.in/resources";
+const landingPageUrl = "/resources";
 
 export default function SiteFooter() {
   return (
