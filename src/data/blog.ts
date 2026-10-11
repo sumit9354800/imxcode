@@ -31,6 +31,7 @@ export const blogPosts: BlogPost[] = [
     image: "/blog/modern-business-website.webp",
     slug: "what-makes-a-modern-business-website-work",
     featured: true,
+    published: true,
   },
 
   {
@@ -43,6 +44,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: "/blog/website-cost-india.webp",
     slug: "professional-website-cost-india",
+    featured: true,
+    published: true,
   },
 
   {
@@ -55,6 +58,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     image: "/blog/nextjs-business-websites.webp",
     slug: "why-businesses-are-moving-to-nextjs",
+    featured: true,
+    published: true,
   },
 
   {
@@ -67,6 +72,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     image: "/blog/ux-conversion.webp",
     slug: "how-ux-improves-website-conversions",
+    featured: true,
+    published: true,
   },
 
   {
@@ -79,6 +86,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     image: "/blog/technical-seo.webp",
     slug: "technical-seo-basics-business-websites",
+    featured: true,
+    published: true,
   },
 
   {
@@ -91,5 +100,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     image: "/blog/brand-digital-experience.webp",
     slug: "website-brand-digital-experience",
+    featured: true,
+    published: true,
   },
 ];
