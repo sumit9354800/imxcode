@@ -301,7 +301,7 @@ export default function FeaturedWork() {
                   ================================================== */}
 
                   <Link
-                    href={`/work/${project.id}`}
+                    href={`${project.liveUrl}`}
                     className="block min-w-0"
                     aria-label={`View ${project.title}`}
                   >
