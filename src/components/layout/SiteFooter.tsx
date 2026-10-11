@@ -44,7 +44,7 @@ export default function SiteFooter() {
 
             <Link
               href="/contact"
-              className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-white transition-colors hover:text-[#373E01]"
+              className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-white transition-colors hover:text-[#737A1A]"
             >
               Start a project
               <span
