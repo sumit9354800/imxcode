@@ -7,6 +7,7 @@ export type BlogCategory =
   | "Creative";
 
 export type BlogPost = {
+  published: unknown;
   id: string;
   title: string;
   excerpt: string;
