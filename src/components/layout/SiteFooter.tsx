@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 import { footerGroups } from "@/data/footer";
 
-const whatsappUrl = "https://wa.me/917780819304";
+const whatsappUrl = "https://wa.me/917678289882";
 
 // Replace this with your actual Instagram profile URL.
 const instagramUrl = "https://www.instagram.com/imxcode0102/";
