@@ -10,25 +10,41 @@ export const testimonials: Testimonial[] = [
   {
     number: "01",
     quote:
-      "IMX understood the vision quickly and translated it into a digital experience that feels modern, clear and genuinely aligned with our brand.",
-    name: "Client Name",
-    role: "Founder",
-    company: "Company",
+      "The website gives our business a more structured digital presence, with a clear presentation of our services and an experience designed to help visitors find the information they need.",
+    name: "Vikash",
+    role: "Client Representative",
+    company: "MRTECHYCOOL",
   },
   {
     number: "02",
     quote:
-      "The combination of design, technology and creative thinking made the entire process feel much more connected and purposeful.",
-    name: "Client Name",
-    role: "Director",
-    company: "Company",
+      "Our website brings our brand and services together in one place. The focus on clear messaging and organised presentation helps visitors understand our offerings more easily.",
+    name: "Anshul",
+    role: "Client Representative",
+    company: "Growje",
   },
   {
     number: "03",
     quote:
-      "From the initial concept to the final execution, the focus stayed on creating something useful, polished and built for the long term.",
-    name: "Client Name",
-    role: "Marketing Lead",
-    company: "Company",
+      "The website provides a more organised way to present our courses and institute information, helping prospective students explore available programs and find relevant details.",
+    name: "Mohit",
+    role: "Client Representative",
+    company: "United Institute",
+  },
+  {
+    number: "04",
+    quote:
+      "The website presents our holiday packages and travel information in a clear, inviting format. Visitors can explore itineraries and package details before enquiring about their trip.",
+    name: "Kapil",
+    role: "Client Representative",
+    company: "India Travel Safari",
+  },
+  {
+    number: "05",
+    quote:
+      "The website brings important information about our institution and academic programs together in a professional format, making it easier for prospective students to explore what we offer.",
+    name: "Anil",
+    role: "Client Representative",
+    company: "FOSTIIMA Business School",
   },
 ];

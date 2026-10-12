@@ -5,11 +5,16 @@ export type WorkService =
   | "Branding"
   | "Video & Motion";
 
+export type ProjectType =
+  | "Client Project"
+  | "Independent Project";
+
 export type WorkProject = {
   id: string;
   title: string;
   category: string;
   service: WorkService;
+  projectType: ProjectType; // New field
   year: string;
   role: string;
   description: string;
@@ -24,13 +29,13 @@ export type WorkProject = {
   published: boolean;
   order: number;
 };
-
 export const workProjects: WorkProject[] = [
   {
     service: "Web Development",
     id: "proj-1",
     title: "FOSTIIMA Business School Website",
     category: "Full-Stack Development / Institutional Website",
+    projectType:"Client Project",
     year: "2026",
     role: "Full-Stack Developer",
     description:
@@ -67,14 +72,15 @@ export const workProjects: WorkProject[] = [
     ],
     featured: true,
     published: true,
-    order: 10,
+    order: 11,
   },
   {
     service: "Web Development",
     id: "proj-2",
     title: "MRTECHYCOOL Business Website",
+    projectType:"Client Project",
     category: "Client Project / Commercial",
-    year: "2024",
+    year: "2026",
     role: "Lead Full Stack Developer",
     description:
       "Production commercial platform engineered for MRTECHYCOOL delivering digital service booking, lead generation pipeline, and technical service catalogs with sub-second load times.",
@@ -109,6 +115,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-3",
     title: "Growje Business Website",
+    projectType:"Client Project",
     category: "Client Project / Commercial",
     year: "2024",
     role: "Full Stack Web Developer",
@@ -145,6 +152,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-4",
     title: "United Institute Educational Portal",
+    projectType:"Client Project",
     category: "Commercial / Education",
     year: "2023",
     role: "Frontend & Backend Engineer",
@@ -181,6 +189,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-5",
     title: "MX SAMMY | B2B Sales & Revenue Analytics CRM",
+    projectType:"Independent Project",
     category: "Full Stack / SaaS CRM",
     year: "2024",
     role: "Full Stack Developer",
@@ -218,6 +227,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-6",
     title: "STACKED — Immersive 3D Experience",
+    projectType:"Independent Project",
     category: "Creative Engineering / 3D Web",
     year: "2024",
     role: "Creative Frontend Engineer",
@@ -247,6 +257,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-7",
     title: "KiranaGo — Grocery E-commerce",
+    projectType:"Independent Project",
     category: "Web Application / Hyperlocal Delivery",
     year: "2023",
     role: "Full Stack Developer",
@@ -276,6 +287,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-8",
     title: "FreshCart Organics Web Application",
+    projectType:"Independent Project",
     category: "E-Commerce Application",
     year: "2023",
     role: "Frontend & Backend Engineer",
@@ -312,6 +324,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-9",
     title: "Airbnb Clone — Full-Stack Rental Platform",
+    projectType:"Independent Project",
     category: "Web Application / Architecture Study",
     year: "2023",
     role: "Full Stack Developer",
@@ -348,6 +361,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-10",
     title: "Myntra Fashion E-Commerce UI",
+    projectType:"Independent Project",
     category: "Frontend Engineering / UI Reproduction",
     year: "2023",
     role: "Frontend Engineer",
@@ -376,6 +390,7 @@ export const workProjects: WorkProject[] = [
     service: "Web Development",
     id: "proj-11",
     title: "India Travel Safari — Premium Goa Holiday Landing Page",
+    projectType:"Client Project",
     category: "Frontend Engineering / Travel & Tourism",
     year: "2026",
     role: "Frontend Engineer",
