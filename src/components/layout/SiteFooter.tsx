@@ -15,6 +15,7 @@ const instagramUrl = "https://www.instagram.com/imxcode0102/";
 // Replace this with the actual deployed India Travel Safari landing page URL.
 const landingPageUrl = "/resources";
 
+
 export default function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-[#050505] text-white">
